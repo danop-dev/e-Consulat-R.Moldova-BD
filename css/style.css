@@ -189,6 +189,9 @@ body{
 }
 .modal__item {
     width: 32%;
+    min-height: 300px;
+    margin-bottom: 15px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,46 +255,6 @@ body{
     color: #fff;
 }
 
-
-
-
-
-.boxes__inner {
-    margin-top: 50px;
-    /* display: grid;
-    grid-template-columns: auto auto auto; */
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    
-    margin-left:10px;
-}
-
-.modal-box{
-    width: 33.33%;
-}
-
-.modal-box .modal-link {
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    margin-right: 1px;
-}
-
-
-.modal-box .modal-link .descrp {
-    color: #333;
-    
-}
-
-.modal-box .modal-link .button {
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-weight: bolder;
-    font-size: 13px;
-}
-
 .modali-content  {
     background-color: #fff;
     padding: 35px;
@@ -311,13 +274,14 @@ body{
     height: 640px;
     overflow: scroll;
 }
+
 .mod{
     color:black;
     font-size:20px;
     border-bottom:1px #a3a3a3 solid;
     text-align:center;
-
 }
+
 .choice{
     text-align: center;
     font-size: 13px;
@@ -326,10 +290,12 @@ body{
     border-radius:4px;
     color:#1f3d5d;
 }
+
 .container2{
     margin-left:10px;
     border:1px #ccc solid;
 }
+
 .container2 a{
     margin-left:14px;
     text-decoration:none;
@@ -344,6 +310,7 @@ body{
     font-weight:bold;
     
 }
+
 .container2_title{
     background:#fafafa;
     padding-top:1px;
@@ -355,13 +322,15 @@ body{
 .a1{
     border-bottom:1px #ccc solid;
 }
+
 .a1:hover{
    background:#fafafa
-
 }
+
 .container2 a:hover{
     color:#1f3d5d;
 }
+
 .modal-close {
     position: absolute;
     top: 15px;
@@ -375,7 +344,6 @@ body{
 
 .modal-close:hover{
     color: rgba(0, 0, 0, 1);
-
 }
 
 .modali-content.active {
@@ -399,101 +367,6 @@ body{
         transform: translate(-50%, -50%) scale(1);
     }
 }
-   
-   
-.box {
-    background: #f4f4f4;
-
-    margin-bottom: 15px;
-    width: 100%; 
-    min-height: 210px;
-    padding: 30px 30px 30px 90px;
-    background: white;
-    color: #333;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease-in-out 0s;
-}
-   
-.box:hover {
-    background: #b50028;
-    color: #fff;
-}
-
-.box:after {
-    content: "";
-    display: block;
-    border-top: 500px solid #fff;
-    border-left: 500px solid transparent;
-    margin-top: -55%;
-    margin-left: 100%;
-    opacity: 0;
-    position: absolute;
-    transform: scale(2);
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.box:hover:after {
-    margin-left: 0;
-    opacity: 0.1;
-}
-
-.box .level {
-    color: #333;
-    padding: 15px 0;
-    text-align: left;
-    font-size: 16px;
-    padding-left: 10px;
-    
-    font-weight: 700;
-    
-    text-transform: capitalize;
-}
-.box .level:hover:after{
-    color:white;
-}
-
-
-.box p {
-    font-size: 12px;
-    color: #a3a3a3;
-    line-height: 25px;
-    margin: 0;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.box .level i {
-    font-size: 50px;
-    color: #b50028;
-    position: absolute;
-    top: 40px;
-    left: 20px;
-    transition: all 0.3s ease-in-out 0s;
-    size:100px;
-}
-
-.box:hover i {
-    color: #fff;
-}
-
-.box .touch {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
-}
-
-.default {
-    text-decoration: none;
-}
-
-.box:hover p {
-    color: white;
-}
-
-
 /* Modal window */
 
 /* ### section services close ### */
