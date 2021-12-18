@@ -14,7 +14,7 @@ body{
 /* ### navigation ### */
 .nav-bar {
     box-shadow: 0 4px 10px -6px grey;
-    padding: 25px 0;
+    padding: 30px 0;
     color: #0353a3;
     background-color: #fff;
 
@@ -23,7 +23,24 @@ body{
     left: 0;
     z-index: 1000px;
     width: 100%;
+
+    transition: all .2s linear;
 }
+
+.nav--toTop{
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav--toTop .search-input{
+    background-color: transparent;
+}
+
+.nav--toTop:hover{
+    padding: 30px 0;
+    background-color: #fff;
+}
+
 
 .nav-bar__ul {
     display: flex;
@@ -541,3 +558,285 @@ body{
     background-color: #CC0A2F;
 }
 /* ### footer close ### */
+
+
+
+/* ### howWork Page ### */
+/* Tutorial style */
+
+.about--tutorial{
+    justify-content: start;
+}
+.tutorial-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    margin-left: 30px;
+}
+
+.tutorial-link {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: rgba(0, 0, 0, 0.6);
+
+    transition: all .2s linear;
+}
+
+.tutorial-link:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+
+/* ### Cum functioneaza sistemul ### */
+.service-wrapper--how-work .service__title{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.infotext p , .infotext h3 ,.acceslist{
+    font-size: 1rem;
+    line-height: 1.65rem;
+
+    margin-right:30px;
+    margin-left:30px;
+    color:#333;
+}
+.infotext p{
+    line-height: 2;
+}
+.infotext h3{
+    line-height: 4;
+}
+/* ### howWork Page close ### */
+
+
+
+/* ### terms Page ### */
+.choicee{       
+    font-size: 1rem;
+    font-style: italic;
+    padding: 20px 15px;
+    border: 1px #bce8f1 solid;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.6);
+
+    margin: 20px 0;
+}
+
+.container22{
+    margin-left:30px;
+    margin-right:30px;
+    border:1px #ccc solid;
+    overflow:scroll;
+    height:400px;
+}
+.container22 h4{
+    margin-left: 10px;   
+    font-size: 1.1rem;
+    line-height: 3;
+    color: #333;
+}
+
+.container22 h5{
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 10px 0 10px 10px;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+.container22 p   {
+    margin-left: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.container22 ul, .container22 ol{
+    list-style-type: circle !important;
+}
+
+.container22 ul li, .container22 ol li{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.container22 ul li::before, .container22 ol li::before{
+    content: "-";
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.container22_title{
+    background:#F5F5F5;
+    padding: 15px 5px;
+    border-bottom:1px #ccc solid;
+ 
+}
+
+/* ### terms Page ### */
+
+
+/* ### Contact ### */
+.contact__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.contact__col {
+    width: calc(50% - 30px);
+}
+
+.contact__info {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+}
+
+.contact__info p{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.contact__title {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.contact__title p{
+    margin: 20px 0;
+}
+
+.contact__date {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.contact__date-row {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.date-icon {
+    width: 40px;
+    height: 100%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    font-size: 1.1rem;
+    color: #0353a3;
+}
+
+.contact__pers-info {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+}
+
+.contact__pers-head {
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.contact__pers-date {
+    
+    color:rgba(0, 0, 0, 0.6);
+    font-style: italic;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-input{
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 20px;
+
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    
+}
+.form-input--50{
+    width: calc(50% - 10px);
+}
+
+#contactMessage{
+    resize: vertical;
+    min-height: 80px;
+    height: 100px;
+}
+
+.form-input::placeholder{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.form-input:focus{
+    outline: none;
+    border: 1px solid #0b67c3;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+.send-btn{
+    outline: none;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 10px 50px;
+    background-color: #0353a3;
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    transition: all .2s linear;
+}
+
+.send-btn:hover{ 
+    background-color: transparent;
+    color: #0353a3;
+    border: 1px solid #0353a3; 
+}
+
+.send-btn:active{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: underline;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.more-info{
+    margin-top: 20px;
+}
+
+.more-info a{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: italic;
+
+    transition: all .2s linear;
+}
+
+.more-info a:hover{
+    color: rgba(0, 0, 0, 1);
+    text-decoration: underline;
+}
+/* ### Contact page close ### */
