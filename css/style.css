@@ -971,6 +971,7 @@ span input:hover{
 .label-info{
     margin-top: 20px;
     font-weight: 700;
+    font-size: 0.9rem;
 }
 
 .data-inp{
@@ -1058,3 +1059,110 @@ span input:hover{
 }
 
 /* ### LOGIN PAGE PHP close ### */
+
+
+
+
+
+/* ### DOSAR PAGE PHP ### */
+.box__scroll{
+    width: 100%;
+    height: 500px;
+    border: 1px #ccc solid;
+    overflow: scroll;
+
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.doc__item{
+    margin-bottom: 40px;
+}
+
+.doc__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc__left {
+    width: 70%;
+}
+
+
+.doc__list-item {
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    font-size: 0.95rem;
+    display: flex;
+}
+
+.doc__list-item>b{
+    display: flex;
+    justify-content: flex-end;
+    width: 35%;
+
+    text-align: right;
+    margin-right: 2%;
+    color: #004890;
+    font-weight: 400;
+}
+
+.doc__right {
+    width: 30%;
+    height: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.doc__right div{
+    font-family: 'Roboto Mono', monospace;
+    color: #0353a3;
+    font-style: italic;
+    font-weight: 700;
+    
+    margin-bottom: 10px;
+}
+
+.doc__right b{
+    font-style: italic;
+}
+
+.doc__alert {
+    width: 90%;
+    margin: 10px auto; 
+    padding: 5px 20px;
+    border: 1px solid #0353a3;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.doc__alert p{
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.info-btn-row {
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.info-btn-row a{
+    width: 160px;
+    margin-top: 0;
+    font-size: 0.85rem;
+}
+
+.info-btn-row i::before{
+    margin-right: 10px;
+}
+.create-btn .panel__btn i::before{
+    margin-right: 10px;
+}
+
+/* ### DOSAR PAGE PHP close ### */
