@@ -51,14 +51,14 @@
                     <li class="nav-bar__item">
                         <ul class="nav-bar__sub-ul">
                             <li class="nav-bar__sub-item">
-                                <a href="#header" class="nav-bar__sub-link"><i
+                                <a href="howWork.html" class="nav-bar__sub-link"><i
                                         class="fas fa-question-circle">Gidare</i></a>
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="register.php" class="nav-bar__sub-link"><i class="fas fa-user">Inregistrare</i></a>
+                                <a href="#" class="nav-bar__sub-link"><i class="fas fa-user">Inregistrare</i></a>
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="login.php" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Logare</i></a>
+                                <a href="#" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Logare</i></a>
                             </li>
                         </ul>
                     </li>
@@ -73,96 +73,71 @@
                 <a class="head-logo__link" href="index.html">
                     <img class="main-logo" src="img/MAE Moldova.png"
                         alt="Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova">
-                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cum
-                        funcţionează sistemul?</div>
+                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Înregistrare în sistem</div>
                 </a>
             </div>
         </div> <!-- container close -->
     </section> <!-- banner close -->
 
-    <section class="section" id="about">
+    <section class="section" id="register">
         <div class="container">
-            <div class="about__wrapper">
-                <div class="about__col about--left">
-                    <i class="fas fa-video"></i>
-                    <div class="about_col-text">EXEMPLE VIDEO</div>
-                </div>
-                <div class="about__col about--right about--tutorial">
-                    <div class="tutorial-items">
-                        <a href="#" class="tutorial-link">Cum funcţionează sistemul</a>
-                        <a href="#" class="tutorial-link">Exemplu cerere pentru Titlu de călătorie</a>
-                        <a href="#" class="tutorial-link">Exemplu cerere pentru Înscriere certificat de naştere</a>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- container close -->
-    </section> <!-- about close -->
-
-    <section class="section" id="how_work">
-        <div class="container">
-            <div class="service-wrapper service-wrapper--how-work">
-                <div class="service__title"> Cum funcţionează sistemul? <br>
+            <div class="box_wrapper">
+                <div class="box_wrapper-title"> Cont nou <br>
                     <hr>
                 </div>
-
-
-                <div class="infotext">
-                    <p>Acest sistem informatic modern va permite cetăţenilor R.Moldova să acceseze informaţii consulare
-                        de calitate
-                        într-un mod eficient şi transparent, beneficiind de un confort crescut datorită posibilităţii de
-                        a
-                        interacţiona online cu personalul Ministerului Afacerilor Externe, de a trimite solicitări prin
-                        mijloace
-                        electronice fără a mai fi nevoiţi să se deplaseze in mod repetat la ghişeu, eliminându-se astfel
-                        barierele
-                        birocratice şi cele geografice.</p>
-
-                    <p>Drept urmare, se va informatiza preluarea şi soluţionarea tuturor cererilor de servicii
-                        consulare.</p>
-
-                    <p> Totodată, Sistemul Informatic pentru Managementul Integrat al Serviciilor pentru Cetăţeni va
-                        avea şi o
-                        componentă de programare pentru solicitanţii de servicii consulare.</p>
-                    <p>
-                        Pentru cetăţenii R.Moldova, proiectul vizează simplificarea procedurilor de soluţionare a
-                        serviciilor consulare prestate de Ministerul Afacerilor Externe, ceea ce va duce la creşterea
-                        încrederii cetăţeanului în reţeaua consulară a R.Moldova.</p>
-                    <h3>Obiectivele principale urmărite prin acest proiect sunt:</h3>
-                    <div class="acceslist">
-                        <ul>
-                            <li>Posibilitatea accesării, mult mai facile, a serviciilor consulare de către cetăţenii
-                                R.Moldova;</li>
-                            <li>Uniformizarea serviciilor consulare prestate la nivelul întregii reţele consulare a
-                                R.Moldova;</li>
-                            <li>Coordonarea unitară a serviciilor consulare. Astfel, prin intermediul Direcţiei
-                                Monitorizare şi
-                                Suport Consular se vor putea urmări şi analiza, în timp real, toate serviciile consulare
-                                efectuate
-                                de către orice misiune diplomatică/oficiu consular;
-                            </li>
-                            <li>Modernizarea de substanţă a activităţii consulare desfăşurate în cadrul misiunilor
-                                diplomatice/oficiilor consulare prin eliminarea birocraţiei şi a procedurilor greoaie,
-                                cât şi prin
-                                introducerea instrumentelor informatice specifice secolului XXI în activitatea zilnică a
-                                lucrătorilor consulari
-                            </li>
-                        </ul>
+                <div class="input_wrapper">
+                    <div class="input__col">
+                        <form id="input-form" action="#" method="POST">
+                            <div class="input-line">
+                                <label class="label-info" for="register-email">Adresa de e-mail</label>
+                                <input class="data-inp" type="email" name="register-email" required>
+                            </div>
+                            <div class="input-line">
+                                <label class="label-info" for="register-fname">Nume</label>
+                                <input class="data-inp" type="text" name="register-fname" required>
+                            </div>
+                            <div class="input-line">
+                                <label class="label-info" for="register-lname">Prenume</label>
+                                <input class="data-inp" type="password" name="register-lname" required>
+                            </div>
+                            <div class="input-line">
+                                <label class="label-info" for="register-password">Parolă</label>
+                                <input class="data-inp" type="password" name="register-password" required>
+                            </div>
+                            <div class="input-line">
+                                <label class="label-info" for="register-passwordCheck">Repetă Parola</label>
+                                <input class="data-inp" type="password" name="register-passwordCheck" required>
+                            </div>
+                            <div class="input-line">
+                                <label class="label-info">Cetățenie</label>
+                                <div class="checkbox--line">
+                                    <input type="radio" id="nation-ro" name="nation">
+                                    <label for="nation-ro">R.Moldova</label>
+                                </div>
+                                <div class="checkbox--line">
+                                    <input type="radio" id="nation-all" name="nation">
+                                    <label for="nation-all">Altă cetățenie</label>
+                                </div>
+                                
+                                
+                            </div>
+                            <input class="submit-data" type="submit" name="register-submit" value="Creeaza cont nou">
+                        </form>
                     </div>
-                    <hr id="footerhr">
-                    <h3>Exemple video pentru utilizarea sistemului
-                    </h3>
-                    <div class="acceslist">
-                        <div class="tutorial-items">
-                            <a href="#" class="tutorial-link">Cum funcţionează sistemul</a>
-                            <a href="#" class="tutorial-link">Exemplu cerere pentru Titlu de călătorie</a>
-                            <a href="#" class="tutorial-link">Exemplu cerere pentru Înscriere certificat de naştere</a>
+                    <div class="input__col">
+                        <div class="panel-box">
+                            <div class="panel__title">CONT EXISTENT</div>
+                            <div class="panel__text">
+                                <p>Vă puteţi autentifica într-un cont existent folosind butonul de mai jos.</p>
+                            </div>
+                            <a href="login.php" class="panel__btn">Autentificare</a>
                         </div>
-                    </div>
-                </div> <!-- infotext close -->
 
-            </div> <!-- service-wrapper service-wrapper--how-work close -->
+                    </div>
+                </div> <!-- input_wrapper close  --> 
+            </div> <!-- contact__wrapper close -->
         </div> <!-- container close -->
-    </section> <!-- how_work close -->
+    </section> <!-- register close -->
 
     <section class="section" id="bottom_nav">
         <div class="container">
@@ -171,13 +146,13 @@
                     <a class="service__nav-link" href="index.html">Servicii Consulare</a>
                 </li>
                 <li class="service__nav-item">
-                    <a class="service__nav-link" href="#about">Cum functioneaza sistemul</a>
+                    <a class="service__nav-link" href="howWork.html">Cum functioneaza sistemul</a>
                 </li>
                 <li class="service__nav-item">
                     <a class="service__nav-link" href="contact.html">Centrul de contact şi suport</a>
                 </li>
                 <li class="service__nav-item">
-                    <a class="service__nav-link" href="terms.html">Condiţii de utilizare / Condiţii legale</a>
+                    <a class="service__nav-link" href="#header">Condiţii de utilizare / Condiţii legale</a>
                 </li>
             </ul>
         </div> <!-- container close-->
@@ -202,8 +177,6 @@
             </div>
         </div>
     </section> <!-- about close -->
-
-
 
     <footer class="footer">
         <div class="container">

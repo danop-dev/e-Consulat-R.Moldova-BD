@@ -36,7 +36,7 @@ $(document).ready(function () {
     }
     ModalActivity(); // -> Run
 
-
+    
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
 
