@@ -1,3 +1,10 @@
+<?php
+include 'login.php';
+
+echo $email;
+
+?>
+
 <!DOCTYPE html>
 <html lang="ro">
 
@@ -9,18 +16,16 @@
     <meta name="keywords"
         content="e-consulat, Servicii, Servicii Consulare, Consulat, Servicii Consulare R. Moldova, Servicii Online">
     <meta name="author" content="Oprea Danu">
-    <link rel="icon" href="img/tab-icon.ico">
+    <link rel="icon" href="../img/tab-icon.ico">
     <title>e-Consulatul R. Moldova</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -55,7 +60,11 @@
                                         class="fas fa-question-circle">Ghidare</i></a>
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="#" class="nav-bar__sub-link"><i class="fas fa-user">Inregistrare</i></a>
+                                <a href="#" class="nav-bar__sub-link">
+                                    <?php
+                                        echo "Bine ai venit ". $email;
+                                    ?>
+                                </a>
                             </li>
                             <li class="nav-bar__sub-item">
                                 <a href="#" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Logare</i></a>
@@ -71,57 +80,86 @@
         <div class="container">
             <div id="head-logo">
                 <a class="head-logo__link" href="index.html">
-                    <img class="main-logo" src="img/MAE Moldova.png"
+                    <img class="main-logo" src="../img/MAE Moldova.png"
                         alt="Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova">
-                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Logare în sistem</div>
+                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile mele</div>
                 </a>
             </div>
         </div> <!-- container close -->
     </section> <!-- banner close -->
 
-    <section class="section" id="register">
+    <section class="section" id="doc">
         <div class="container">
             <div class="box_wrapper">
-                <div class="box_wrapper-title"> Autentificare <br>
+                <div class="box_wrapper-title"> Cererile mele <br>
                     <hr>
                 </div>
-                <div class="input_wrapper">
-                    <div class="input__col">
-                        <form id="input-form" action="#" method="POST">
-                            <div class="input-line">
-                                <label class="label-info" for="login-email">Adresa de e-mail (utilizată la crearea contului)</label>
-                                <input class="data-inp" type="email" name="login-email" required>
+                <div class="box__scroll">
+                    <div class="doc__item">
+                        <div class="doc__box">
+                            <div class="doc__left">
+                                <ul class="doc__list">
+                                    <li class="doc__list-item">
+                                        <b>Cod cerere:</b> PE4504350
+                                    </li>
+                                    <li class="doc__list-item">
+                                        <b>Serviciu consular solicitat:</b> Înscriere certificat de naştere R.Moldova
+                                    </li>
+                                    <li class="doc__list-item">
+                                        <b>Misiunea diplomatica/oficiul consular:</b> Chişinău
+                                    </li>
+                                    <li class="doc__list-item">
+                                        <b>Data și ora programării:</b> 06.11.2020 - 09:40
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="input-line">
-                                <label class="label-info" for="login-password">Parolă</label>
-                                <input class="data-inp" type="password" name="login-password" required>
+                            <div class="doc__right">
+                                <div>Dată cerere</div>
+                                <b>29/12/2019</b>
+                                <div class="doc__alert">
+                                    <p>-</p>
+                                </div>
                             </div>
-                            <div class="input-line checkbox--line">
-                                <input type="checkbox" name="login-checkbox">
-                                <label class="label-info" for="login-checkbox">Păstreaza-mă autentificat</label>
-                            </div>
-                            <input class="submit-data" type="submit" name="login-submit" value="Intră în cont">
-                        </form>
-                    </div>
-                    <div class="input__col">
-                        <div class="panel-box">
-                            <div class="panel__title">RECUPERARE PAROLĂ</div>
-                            <div class="panel__text">
-                                <p>Daca v-aţi uitat parola, apăsaţi pe butonul de mai jos pentru recuperare.</p>
-                            </div>
-                            <a href="#" class="panel__btn">Recuperaţi parola</a>
+                        </div> <!-- doc__item close -->
+                        <div class="info-btn-row">
+                            <a href="#" class="panel__btn"><i class="fas fa-file-alt">Detalii cerere</i></a>
                         </div>
-
-                        <div class="panel-box">
-                            <div class="panel__title">CONT NOU</div>
-                            <div class="panel__text">
-                                <p>Puteţi crea un cont nou accesând link-ul de mai jos.</p>
+                    </div> <!-- doc__item close -->
+                    <div class="doc__item">
+                        <div class="doc__box">
+                            <div class="doc__left">
+                                <ul class="doc__list">
+                                    <li class="doc__list-item">
+                                        <b>Cod cerere:</b> PE4504350
+                                    </li>
+                                    <li class="doc__list-item">
+                                        <b>Serviciu consular solicitat:</b> Înscriere certificat de naştere R.Moldova
+                                    </li>
+                                    <li class="doc__list-item">
+                                        <b>Misiunea diplomatica/oficiul consular:</b> Chişinău
+                                    </li>
+                                    <li class="doc__list-item">
+                                        <b>Data și ora programării:</b> 06.11.2020 - 09:40
+                                    </li>
+                                </ul>
                             </div>
-                            <a href="register.php" class="panel__btn">Creează cont nou</a>
+                            <div class="doc__right">
+                                <div>Dată cerere</div>
+                                <b>29/12/2019</b>
+                                <div class="doc__alert">
+                                    <p>-</p>
+                                </div>
+                            </div>
+                        </div> <!-- doc__item close -->
+                        <div class="info-btn-row">
+                            <a href="#" class="panel__btn"><i class="fas fa-file-alt">Detalii cerere</i></a>
                         </div>
+                    </div> <!-- doc__item close -->
 
-                    </div>
-                </div> <!-- input_wrapper close  --> 
+                </div> <!-- box__scroll close  --> 
+                <div class="create-btn">
+                    <a href="#" class="panel__btn"><i class="fas fa-address-card">Cerere</i></a>
+                </div>
             </div> <!-- contact__wrapper close -->
         </div> <!-- container close -->
     </section> <!-- register close -->
@@ -172,7 +210,7 @@
                     <div class="footer__item">
                         <h3 class="footer__title --title">Despre noi</h3>
                         <div class="footer__about-text">
-                            <img class="main-logo footer--logo" src="img/MAE Moldova.png"
+                            <img class="main-logo footer--logo" src="../img/MAE Moldova.png"
                                 alt="Ministerul Afacerilor Externe şi Integrării Europene RM">
                             <div>
                                 <p>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova</p>
@@ -245,7 +283,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

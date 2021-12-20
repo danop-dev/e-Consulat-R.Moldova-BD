@@ -55,10 +55,10 @@
                                         class="fas fa-question-circle">Ghidare</i></a>
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="#" class="nav-bar__sub-link"><i class="fas fa-user">Inregistrare</i></a>
+                                <a href="register.html" class="nav-bar__sub-link"><i class="fas fa-user">Inregistrare</i></a>
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="#" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Logare</i></a>
+                                <a href="login.html" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Logare</i></a>
                             </li>
                         </ul>
                     </li>
@@ -85,43 +85,31 @@
                 <div class="box_wrapper-title"> Cont nou <br>
                     <hr>
                 </div>
+                <div class="alert-info"></div>
                 <div class="input_wrapper">
                     <div class="input__col">
-                        <form id="input-form" action="#" method="POST">
+                        <form id="input-form" method="POST">
                             <div class="input-line">
-                                <label class="label-info" for="register-email">Adresa de e-mail</label>
-                                <input class="data-inp" type="email" name="register-email" required>
+                                <label class="label-info" for="reg_email">Adresa de e-mail</label>
+                                <input class="data-inp" type="email" name="reg_email" id="reg_email" required>
                             </div>
                             <div class="input-line">
-                                <label class="label-info" for="register-fname">Nume</label>
-                                <input class="data-inp" type="text" name="register-fname" required>
+                                <label class="label-info" for="reg_fname">Nume</label>
+                                <input class="data-inp" type="text" name="reg_fname" id="reg_fname" required>
                             </div>
                             <div class="input-line">
-                                <label class="label-info" for="register-lname">Prenume</label>
-                                <input class="data-inp" type="password" name="register-lname" required>
+                                <label class="label-info" for="reg_lname">Prenume</label>
+                                <input class="data-inp" type="text" name="reg_lname" id="reg_lname" required>
                             </div>
                             <div class="input-line">
-                                <label class="label-info" for="register-password">Parolă</label>
-                                <input class="data-inp" type="password" name="register-password" required>
+                                <label class="label-info" for="reg_psw">Parolă</label>
+                                <input class="data-inp" type="password" name="reg_psw" id="reg_psw" required>
                             </div>
                             <div class="input-line">
-                                <label class="label-info" for="register-passwordCheck">Repetă Parola</label>
-                                <input class="data-inp" type="password" name="register-passwordCheck" required>
+                                <label class="label-info" for="reg_pswCheck">Repetă Parola</label>
+                                <input class="data-inp" type="password" name="reg_pswCheck" id="reg_pswCheck" required>
                             </div>
-                            <div class="input-line">
-                                <label class="label-info">Cetățenie</label>
-                                <div class="checkbox--line">
-                                    <input type="radio" id="nation-ro" name="nation">
-                                    <label for="nation-ro">R.Moldova</label>
-                                </div>
-                                <div class="checkbox--line">
-                                    <input type="radio" id="nation-all" name="nation">
-                                    <label for="nation-all">Altă cetățenie</label>
-                                </div>
-                                
-                                
-                            </div>
-                            <input class="submit-data" type="submit" name="register-submit" value="Creeaza cont nou">
+                            <input id="submitReg" class="submit-data" type="submit" name="register-submit" value="Creeaza cont nou">
                         </form>
                     </div>
                     <div class="input__col">
@@ -130,7 +118,7 @@
                             <div class="panel__text">
                                 <p>Vă puteţi autentifica într-un cont existent folosind butonul de mai jos.</p>
                             </div>
-                            <a href="login.php" class="panel__btn">Autentificare</a>
+                            <a href="login.html" class="panel__btn">Autentificare</a>
                         </div>
 
                     </div>
@@ -259,6 +247,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
 </body>
 
 </html>
