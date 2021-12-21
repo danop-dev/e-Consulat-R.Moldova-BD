@@ -52,10 +52,10 @@ $("#submitLogin").click(function(e){
 
     $.ajax({
         type: 'POST',
-        url: 'php/login.php',
+        url: './php/login.php',
         data:{
             login_email: login_email,
-            login_psw: login_psw,
+            login_psw: login_psw
         },
         dataType: "json",
         success: function(response){

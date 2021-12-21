@@ -32,9 +32,6 @@ if(!empty($_POST["reg_email"]) && !empty($_POST["reg_fname"]) && !empty($_POST["
             $insert_sql = "INSERT INTO users(email, fname, lname, psw) VALUES('$email', '$fname', '$lname', '$password')";
             mysqli_query($conbd, $insert_sql);
             echo json_encode(array('statusCode' => 200));
-            
-            // header("Location: http://localhost/TEZA%20DE%20AN%20BD/login.html");
-            // exit();
         } else {
             echo json_encode(array('statusCode' => 201));
         }  

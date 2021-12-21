@@ -44,4 +44,7 @@ $(document).ready(function () {
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 1500);
     });
+
+
+    $("#birthday").datepicker();
 });

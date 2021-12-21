@@ -1,7 +1,9 @@
 <?php
-include 'login.php';
+session_start();
 
-echo $email;
+if(isset($_SESSION["email"])) {
+    $email = $_SESSION["email"];
+}
 
 ?>
 
@@ -36,10 +38,10 @@ echo $email;
                     <li class="nav-bar__item">
                         <ul class="nav-bar__sub-ul">
                             <li class="nav-bar__sub-item">
-                                <a href="index.html" class="nav-bar__sub-link"><i class="fas fa-home"></i></a>
+                                <a href="dosar.php" class="nav-bar__sub-link"><i class="fas fa-home"></i></a>
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="contact.html" class="nav-bar__sub-link"><i class="fas fa-envelope"></i></a>
+                                <a href="../contact.html" class="nav-bar__sub-link"><i class="fas fa-envelope"></i></a>
                             </li>
                             <li class="nav-bar__sub-item">
                                 <a href="#" class="nav-bar__sub-link"><i class="fas fa-wifi"></i></a>
@@ -56,18 +58,19 @@ echo $email;
                     <li class="nav-bar__item">
                         <ul class="nav-bar__sub-ul">
                             <li class="nav-bar__sub-item">
-                                <a href="howWork.html" class="nav-bar__sub-link"><i
+                                <a href="../howWork.html" class="nav-bar__sub-link"><i
                                         class="fas fa-question-circle">Ghidare</i></a>
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="#" class="nav-bar__sub-link">
+                                <div class="hello">
                                     <?php
-                                        echo "Bine ai venit ". $email;
+                                        echo "Bine ai venit! <br>". "<b>". $email. "</b>";
                                     ?>
-                                </a>
+                                </div>
+                                
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="#" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Logare</i></a>
+                                <a href="../index.html" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Iesire</i></a>
                             </li>
                         </ul>
                     </li>
@@ -158,7 +161,7 @@ echo $email;
 
                 </div> <!-- box__scroll close  --> 
                 <div class="create-btn">
-                    <a href="#" class="panel__btn"><i class="fas fa-address-card">Cerere</i></a>
+                    <a href="docDataIn.php" class="panel__btn"><i class="fas fa-address-card">Cerere</i></a>
                 </div>
             </div> <!-- contact__wrapper close -->
         </div> <!-- container close -->

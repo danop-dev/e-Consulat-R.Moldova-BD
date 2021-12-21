@@ -56,7 +56,12 @@ body{
 }
 
 .nav-bar__sub-item {
-    margin: 0 8px;   
+    margin: 0 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .nav-bar__sub-link {
@@ -1182,3 +1187,93 @@ span input:hover{
     background-color: rgba(0, 255, 0, 0.1);
     border: 1px solid green;
 }
+
+
+
+
+
+.hello{
+    color: #0353a3;
+    line-height: 1.4;
+}
+
+.hello b{
+    font-style: italic;
+}
+
+
+
+
+/* ### INPUT DATA PAHE PHP  ### */
+
+
+
+.input_row {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+
+    margin-top: 40px;
+}
+.input_col {
+}
+.input_col--big {
+    width: 60%;
+}
+.input_col__title {
+    background-color: #fff;
+    color: #0353a3;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: -5px;
+
+    border: 1px solid #eee;
+    border-bottom: none;
+
+}
+.input_wrapper-doc {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.input_wrapper_col {
+    width: 49%;
+}
+.input_wrapper_col--full{
+    width: 100%;
+}
+
+.input_col--small {
+    width: 39%;
+}
+.input_wraper__data{
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    color: rgba(0, 0, 0, 1);
+    font-size: 0.9rem;
+}
+.input_wraper__data::placeholder{
+    font-size: 0.9rem;
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+
+}
+
+.input_wraper__data:focus {
+    outline: none;
+    border: 2px solid #0353a3;
+}
+
+/* ### INPUT DATA PAHE PHP  ### */
