@@ -1216,6 +1216,7 @@ span input:hover{
     margin-top: 40px;
 }
 .input_col {
+    width: 100%;
 }
 .input_col--big {
     width: 60%;
@@ -1275,5 +1276,37 @@ span input:hover{
     outline: none;
     border: 2px solid #0353a3;
 }
+.col33{
+    width: 32%;
+}
+.row{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.min50{
+    display: flex;
+    justify-content: space-between;
+}
+
+.min50 input{
+    width: 49%;
+}
+
+.min33{
+    display: flex;
+    justify-content: space-between;
+}
+.min33 input{
+    width: 32%;
+}
+
+.label-info-input {
+    color: rgba(0, 0, 0, 1);
+    font-size: 0.9rem;
+}
+
+
+
 
 /* ### INPUT DATA PAHE PHP  ### */

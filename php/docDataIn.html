@@ -23,7 +23,9 @@ if(isset($_SESSION["email"])) {
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 
     <link rel="stylesheet" href="../css/all.css">
@@ -68,10 +70,11 @@ if(isset($_SESSION["email"])) {
                                         echo "Bine ai venit! <br>". "<b>". $email. "</b>";
                                     ?>
                                 </div>
-                                
+
                             </li>
                             <li class="nav-bar__sub-item">
-                                <a href="../index.html" class="nav-bar__sub-link"><i class="fas fa-sign-in-alt">Iesire</i></a>
+                                <a href="../index.html" class="nav-bar__sub-link"><i
+                                        class="fas fa-sign-in-alt">Iesire</i></a>
                             </li>
                         </ul>
                     </li>
@@ -86,7 +89,8 @@ if(isset($_SESSION["email"])) {
                 <a class="head-logo__link" href="index.html">
                     <img class="main-logo" src="../img/MAE Moldova.png"
                         alt="Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova">
-                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile mele</div>
+                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile
+                        mele</div>
                 </a>
             </div>
         </div> <!-- container close -->
@@ -94,264 +98,270 @@ if(isset($_SESSION["email"])) {
 
     <section class="section" id="doc">
         <div class="container">
-            <div class="box_wrapper" style="background-color: #F5F5F5;" >
+            <div class="box_wrapper" style="background-color: #F5F5F5;">
                 <div class="box_wrapper-title"> Cererile mele <br>
                     <hr>
                 </div>
-                
+
                 <form action="#" method="POST">
                     <div class="input_row">
                         <div class="input_col input_col--big">
                             <div class="input_col__title">Date de identitate ale solicitantului</div>
                             <div class="input_wrapper-doc">
                                 <div class="input_wrapper_col">
-                                    <input class="input_wraper__data" type="name" name="fname" placeholder="Nume Familie">
-                                    <input class="input_wraper__data" type="name" name="fnameBirth" placeholder="Nume la naştere">
-                                    <input class="input_wraper__data" type="name" name="fnameDat" placeholder="Nume familie tată">
-                                    <input class="input_wraper__data" type="name" name="fnameMom" placeholder="Nume familie mamă">
-                                    <input class="input_wraper__data" type="text" name="cetatenie" placeholder="Cetăţean al statului" list="country">
+                                    <input class="input_wraper__data" type="name" name="fname"
+                                        placeholder="Nume Familie">
+                                    <input class="input_wraper__data" type="name" name="fnameBirth"
+                                        placeholder="Nume la naştere">
+                                    <input class="input_wraper__data" type="name" name="fnameDat"
+                                        placeholder="Nume familie tată">
+                                    <input class="input_wraper__data" type="name" name="fnameMom"
+                                        placeholder="Nume familie mamă">
+                                    <input class="input_wraper__data" type="text" name="cetatenie"
+                                        placeholder="Cetăţean al statului" list="country">
                                     <datalist id="country">
-                                        <option value="Afghanistan" >
-                                        <option value="Albania" >
-                                        <option value="Algeria" >
-                                        <option value="American Samoa" >
-                                        <option value="Andorra" >
-                                        <option value="Angola" >
-                                        <option value="Anguilla" >
-                                        <option value="Antarctica" >
-                                        <option value="Antigua and Barbuda" >
-                                        <option value="Argentina" >
-                                        <option value="Armenia" >
-                                        <option value="Aruba" >
-                                        <option value="Australia" >
-                                        <option value="Austria" >
-                                        <option value="Azerbaijan" >
-                                        <option value="Bahamas" >
-                                        <option value="Bahrain" >
-                                        <option value="Bangladesh" >
-                                        <option value="Barbados" >
-                                        <option value="Belarus" >
-                                        <option value="Belgium" >
-                                        <option value="Belize" >
-                                        <option value="Benin" >
-                                        <option value="Bermuda" >
-                                        <option value="Bhutan" >
-                                        <option value="Bolivia" >
-                                        <option value="Bosnia and Herzegovina" >
-                                        <option value="Botswana" >
-                                        <option value="Bouvet Island" >
-                                        <option value="Brazil" >
-                                        <option value="British Indian Ocean Territory" >
-                                        <option value="Brunei Darussalam" >
-                                        <option value="Bulgaria" >
-                                        <option value="Burkina Faso" >
-                                        <option value="Burundi" >
-                                        <option value="Cambodia" >
-                                        <option value="Cameroon" >
-                                        <option value="Canada" >
-                                        <option value="Cape Verde" >
-                                        <option value="Cayman Islands" >
-                                        <option value="Central African Republic" >
-                                        <option value="Chad" >
-                                        <option value="Chile" >
-                                        <option value="China" >
-                                        <option value="Christmas Island" >
-                                        <option value="Cocos (Keeling) Islands" >
-                                        <option value="Colombia" >
-                                        <option value="Comoros" >
-                                        <option value="Congo" >
-                                        <option value="Congo, The Democratic Republic of The" >
-                                        <option value="Cook Islands" >
-                                        <option value="Costa Rica" >
-                                        <option value="Cote D'ivoire" >
-                                        <option value="Croatia" >
-                                        <option value="Cuba" >
-                                        <option value="Cyprus" >
-                                        <option value="Czech Republic" >
-                                        <option value="Denmark" >
-                                        <option value="Djibouti" >
-                                        <option value="Dominica" >
-                                        <option value="Dominican Republic" >
-                                        <option value="Ecuador" >
+                                        <option value="Afghanistan">
+                                        <option value="Albania">
+                                        <option value="Algeria">
+                                        <option value="American Samoa">
+                                        <option value="Andorra">
+                                        <option value="Angola">
+                                        <option value="Anguilla">
+                                        <option value="Antarctica">
+                                        <option value="Antigua and Barbuda">
+                                        <option value="Argentina">
+                                        <option value="Armenia">
+                                        <option value="Aruba">
+                                        <option value="Australia">
+                                        <option value="Austria">
+                                        <option value="Azerbaijan">
+                                        <option value="Bahamas">
+                                        <option value="Bahrain">
+                                        <option value="Bangladesh">
+                                        <option value="Barbados">
+                                        <option value="Belarus">
+                                        <option value="Belgium">
+                                        <option value="Belize">
+                                        <option value="Benin">
+                                        <option value="Bermuda">
+                                        <option value="Bhutan">
+                                        <option value="Bolivia">
+                                        <option value="Bosnia and Herzegovina">
+                                        <option value="Botswana">
+                                        <option value="Bouvet Island">
+                                        <option value="Brazil">
+                                        <option value="British Indian Ocean Territory">
+                                        <option value="Brunei Darussalam">
+                                        <option value="Bulgaria">
+                                        <option value="Burkina Faso">
+                                        <option value="Burundi">
+                                        <option value="Cambodia">
+                                        <option value="Cameroon">
+                                        <option value="Canada">
+                                        <option value="Cape Verde">
+                                        <option value="Cayman Islands">
+                                        <option value="Central African Republic">
+                                        <option value="Chad">
+                                        <option value="Chile">
+                                        <option value="China">
+                                        <option value="Christmas Island">
+                                        <option value="Cocos (Keeling) Islands">
+                                        <option value="Colombia">
+                                        <option value="Comoros">
+                                        <option value="Congo">
+                                        <option value="Congo, The Democratic Republic of The">
+                                        <option value="Cook Islands">
+                                        <option value="Costa Rica">
+                                        <option value="Cote D'ivoire">
+                                        <option value="Croatia">
+                                        <option value="Cuba">
+                                        <option value="Cyprus">
+                                        <option value="Czech Republic">
+                                        <option value="Denmark">
+                                        <option value="Djibouti">
+                                        <option value="Dominica">
+                                        <option value="Dominican Republic">
+                                        <option value="Ecuador">
                                         <option value="Egypt">
-                                        <option value="El Salvador" >
-                                        <option value="Equatorial Guinea" >
-                                        <option value="Eritrea" >
-                                        <option value="Estonia" >
-                                        <option value="Ethiopia" >
-                                        <option value="Falkland Islands (Malvinas)" >
-                                        <option value="Faroe Islands" >
-                                        <option value="Fiji" >
-                                        <option value="Finland" >
-                                        <option value="France" >
-                                        <option value="French Guiana" >
-                                        <option value="French Polynesia" >
-                                        <option value="French Southern Territories" >
-                                        <option value="Gabon" >
-                                        <option value="Gambia" >
-                                        <option value="Georgia" >
-                                        <option value="Germany" >
-                                        <option value="Ghana" >
-                                        <option value="Gibraltar" >
-                                        <option value="Greece" >
-                                        <option value="Greenland" >
-                                        <option value="Grenada" >
-                                        <option value="Guadeloupe" >
-                                        <option value="Guam" >
-                                        <option value="Guatemala" >
-                                        <option value="Guinea" >
-                                        <option value="Guinea-bissau" >
-                                        <option value="Guyana" >
-                                        <option value="Haiti" >
-                                        <option value="Heard Island and Mcdonald Islands" >
-                                        <option value="Holy See (Vatican City State)" >
-                                        <option value="Honduras" >
-                                        <option value="Hong Kong" >
-                                        <option value="Hungary" >
-                                        <option value="Iceland" >
-                                        <option value="India" >
-                                        <option value="Indonesia" >
-                                        <option value="Iran, Islamic Republic of" >
-                                        <option value="Iraq" >
-                                        <option value="Ireland" >
-                                        <option value="Israel" >
-                                        <option value="Italy" >
-                                        <option value="Jamaica" >
-                                        <option value="Japan" >
-                                        <option value="Jordan" >
-                                        <option value="Kazakhstan" >
-                                        <option value="Kenya" >
-                                        <option value="Kiribati" >
-                                        <option value="Korea, Democratic People's Republic of" >
-                                        <option value="Korea, Republic of" >
-                                        <option value="Kuwait" >
-                                        <option value="Kyrgyzstan" >
-                                        <option value="Lao People's Democratic Republic" >
-                                        <option value="Latvia" >
-                                        <option value="Lebanon" >
-                                        <option value="Lesotho" >
-                                        <option value="Liberia" >
-                                        <option value="Libyan Arab Jamahiriya" >
-                                        <option value="Liechtenstein" >
-                                        <option value="Lithuania" >
-                                        <option value="Luxembourg" >
-                                        <option value="Macao" >
-                                        <option value="Macedonia, The Former Yugoslav Republic of" >
-                                        <option value="Madagascar" >
-                                        <option value="Malawi" >
-                                        <option value="Malaysia" >
-                                        <option value="Maldives" >
-                                        <option value="Mali" >
-                                        <option value="Malta" >
-                                        <option value="Marshall Islands" >
-                                        <option value="Martinique" >
-                                        <option value="Mauritania" >
-                                        <option value="Mauritius" >
-                                        <option value="Mayotte" >
-                                        <option value="Mexico" >
-                                        <option value="Micronesia, Federated States of" >
-                                        <option value="Moldova, Republic of" >
-                                        <option value="Monaco" >
-                                        <option value="Mongolia" >
-                                        <option value="Montserrat" >
-                                        <option value="Morocco" >
-                                        <option value="Mozambique" >
-                                        <option value="Myanmar" >
-                                        <option value="Namibia" >
-                                        <option value="Nauru" >
-                                        <option value="Nepal" >
-                                        <option value="Netherlands" >
-                                        <option value="Netherlands Antilles" >
-                                        <option value="New Caledonia" >
-                                        <option value="New Zealand" >
-                                        <option value="Nicaragua" >
-                                        <option value="Niger" >
-                                        <option value="Nigeria" >
-                                        <option value="Niue" >
-                                        <option value="Norfolk Island" >
-                                        <option value="Northern Mariana Islands" >
-                                        <option value="Norway" >
-                                        <option value="Oman" >
-                                        <option value="Pakistan" >
-                                        <option value="Palau" >
-                                        <option value="Palestinian Territory, Occupied" >
-                                        <option value="Panama" >
-                                        <option value="Papua New Guinea" >
-                                        <option value="Paraguay" >
-                                        <option value="Peru" >
-                                        <option value="Philippines" >
-                                        <option value="Pitcairn" >
-                                        <option value="Poland" >
-                                        <option value="Portugal" >
-                                        <option value="Puerto Rico" >
-                                        <option value="Qatar" >
-                                        <option value="Reunion" >
-                                        <option value="Romania" >
-                                        <option value="Russian Federation" >
-                                        <option value="Rwanda" >
-                                        <option value="Saint Helena" >
-                                        <option value="Saint Kitts and Nevis" >
-                                        <option value="Saint Lucia" >
-                                        <option value="Saint Pierre and Miquelon" >
-                                        <option value="Saint Vincent and The Grenadines" >
-                                        <option value="Samoa" >
-                                        <option value="San Marino" >
-                                        <option value="Sao Tome and Principe" >
-                                        <option value="Saudi Arabia" >
-                                        <option value="Senegal" >
-                                        <option value="Serbia and Montenegro" >
-                                        <option value="Seychelles" >
-                                        <option value="Sierra Leone" >
-                                        <option value="Singapore" >
-                                        <option value="Slovakia" >
-                                        <option value="Slovenia" >
-                                        <option value="Solomon Islands" >
-                                        <option value="Somalia" >
-                                        <option value="South Africa" >
-                                        <option value="South Georgia and The South Sandwich Islands" >
-                                        <option value="Spain" >
-                                        <option value="Sri Lanka" >
-                                        <option value="Sudan" >
-                                        <option value="Suriname" >
-                                        <option value="Svalbard and Jan Mayen" >
-                                        <option value="Swaziland" >
-                                        <option value="Sweden" >
-                                        <option value="Switzerland" >
-                                        <option value="Syrian Arab Republic" >
-                                        <option value="Taiwan, Province of China" >
-                                        <option value="Tajikistan" >
-                                        <option value="Tanzania, United Republic of" >
-                                        <option value="Thailand" >
-                                        <option value="Timor-leste" >
-                                        <option value="Togo" >
-                                        <option value="Tokelau" >
-                                        <option value="Tonga" >
-                                        <option value="Trinidad and Tobago" >
-                                        <option value="Tunisia" >
-                                        <option value="Turkey" >
-                                        <option value="Turkmenistan" >
-                                        <option value="Turks and Caicos Islands" >
-                                        <option value="Tuvalu" >
-                                        <option value="Uganda" >
-                                        <option value="Ukraine" >
-                                        <option value="United Arab Emirates" >
-                                        <option value="United Kingdom" >
-                                        <option value="United States" >
-                                        <option value="United States Minor Outlying Islands" >
-                                        <option value="Uruguay" >
-                                        <option value="Uzbekistan" >
-                                        <option value="Vanuatu" >
-                                        <option value="Venezuela" >
-                                        <option value="Viet Nam" >
-                                        <option value="Virgin Islands, British" >
-                                        <option value="Virgin Islands, U.S" >
-                                        <option value="Wallis and Futuna" >
-                                        <option value="Western Sahara" >
-                                        <option value="Yemen" >
-                                        <option value="Zambia" >
-                                        <option value="Zimbabwe" >
+                                        <option value="El Salvador">
+                                        <option value="Equatorial Guinea">
+                                        <option value="Eritrea">
+                                        <option value="Estonia">
+                                        <option value="Ethiopia">
+                                        <option value="Falkland Islands (Malvinas)">
+                                        <option value="Faroe Islands">
+                                        <option value="Fiji">
+                                        <option value="Finland">
+                                        <option value="France">
+                                        <option value="French Guiana">
+                                        <option value="French Polynesia">
+                                        <option value="French Southern Territories">
+                                        <option value="Gabon">
+                                        <option value="Gambia">
+                                        <option value="Georgia">
+                                        <option value="Germany">
+                                        <option value="Ghana">
+                                        <option value="Gibraltar">
+                                        <option value="Greece">
+                                        <option value="Greenland">
+                                        <option value="Grenada">
+                                        <option value="Guadeloupe">
+                                        <option value="Guam">
+                                        <option value="Guatemala">
+                                        <option value="Guinea">
+                                        <option value="Guinea-bissau">
+                                        <option value="Guyana">
+                                        <option value="Haiti">
+                                        <option value="Heard Island and Mcdonald Islands">
+                                        <option value="Holy See (Vatican City State)">
+                                        <option value="Honduras">
+                                        <option value="Hong Kong">
+                                        <option value="Hungary">
+                                        <option value="Iceland">
+                                        <option value="India">
+                                        <option value="Indonesia">
+                                        <option value="Iran, Islamic Republic of">
+                                        <option value="Iraq">
+                                        <option value="Ireland">
+                                        <option value="Israel">
+                                        <option value="Italy">
+                                        <option value="Jamaica">
+                                        <option value="Japan">
+                                        <option value="Jordan">
+                                        <option value="Kazakhstan">
+                                        <option value="Kenya">
+                                        <option value="Kiribati">
+                                        <option value="Korea, Democratic People's Republic of">
+                                        <option value="Korea, Republic of">
+                                        <option value="Kuwait">
+                                        <option value="Kyrgyzstan">
+                                        <option value="Lao People's Democratic Republic">
+                                        <option value="Latvia">
+                                        <option value="Lebanon">
+                                        <option value="Lesotho">
+                                        <option value="Liberia">
+                                        <option value="Libyan Arab Jamahiriya">
+                                        <option value="Liechtenstein">
+                                        <option value="Lithuania">
+                                        <option value="Luxembourg">
+                                        <option value="Macao">
+                                        <option value="Macedonia, The Former Yugoslav Republic of">
+                                        <option value="Madagascar">
+                                        <option value="Malawi">
+                                        <option value="Malaysia">
+                                        <option value="Maldives">
+                                        <option value="Mali">
+                                        <option value="Malta">
+                                        <option value="Marshall Islands">
+                                        <option value="Martinique">
+                                        <option value="Mauritania">
+                                        <option value="Mauritius">
+                                        <option value="Mayotte">
+                                        <option value="Mexico">
+                                        <option value="Micronesia, Federated States of">
+                                        <option value="Moldova, Republic of">
+                                        <option value="Monaco">
+                                        <option value="Mongolia">
+                                        <option value="Montserrat">
+                                        <option value="Morocco">
+                                        <option value="Mozambique">
+                                        <option value="Myanmar">
+                                        <option value="Namibia">
+                                        <option value="Nauru">
+                                        <option value="Nepal">
+                                        <option value="Netherlands">
+                                        <option value="Netherlands Antilles">
+                                        <option value="New Caledonia">
+                                        <option value="New Zealand">
+                                        <option value="Nicaragua">
+                                        <option value="Niger">
+                                        <option value="Nigeria">
+                                        <option value="Niue">
+                                        <option value="Norfolk Island">
+                                        <option value="Northern Mariana Islands">
+                                        <option value="Norway">
+                                        <option value="Oman">
+                                        <option value="Pakistan">
+                                        <option value="Palau">
+                                        <option value="Palestinian Territory, Occupied">
+                                        <option value="Panama">
+                                        <option value="Papua New Guinea">
+                                        <option value="Paraguay">
+                                        <option value="Peru">
+                                        <option value="Philippines">
+                                        <option value="Pitcairn">
+                                        <option value="Poland">
+                                        <option value="Portugal">
+                                        <option value="Puerto Rico">
+                                        <option value="Qatar">
+                                        <option value="Reunion">
+                                        <option value="Romania">
+                                        <option value="Russian Federation">
+                                        <option value="Rwanda">
+                                        <option value="Saint Helena">
+                                        <option value="Saint Kitts and Nevis">
+                                        <option value="Saint Lucia">
+                                        <option value="Saint Pierre and Miquelon">
+                                        <option value="Saint Vincent and The Grenadines">
+                                        <option value="Samoa">
+                                        <option value="San Marino">
+                                        <option value="Sao Tome and Principe">
+                                        <option value="Saudi Arabia">
+                                        <option value="Senegal">
+                                        <option value="Serbia and Montenegro">
+                                        <option value="Seychelles">
+                                        <option value="Sierra Leone">
+                                        <option value="Singapore">
+                                        <option value="Slovakia">
+                                        <option value="Slovenia">
+                                        <option value="Solomon Islands">
+                                        <option value="Somalia">
+                                        <option value="South Africa">
+                                        <option value="South Georgia and The South Sandwich Islands">
+                                        <option value="Spain">
+                                        <option value="Sri Lanka">
+                                        <option value="Sudan">
+                                        <option value="Suriname">
+                                        <option value="Svalbard and Jan Mayen">
+                                        <option value="Swaziland">
+                                        <option value="Sweden">
+                                        <option value="Switzerland">
+                                        <option value="Syrian Arab Republic">
+                                        <option value="Taiwan, Province of China">
+                                        <option value="Tajikistan">
+                                        <option value="Tanzania, United Republic of">
+                                        <option value="Thailand">
+                                        <option value="Timor-leste">
+                                        <option value="Togo">
+                                        <option value="Tokelau">
+                                        <option value="Tonga">
+                                        <option value="Trinidad and Tobago">
+                                        <option value="Tunisia">
+                                        <option value="Turkey">
+                                        <option value="Turkmenistan">
+                                        <option value="Turks and Caicos Islands">
+                                        <option value="Tuvalu">
+                                        <option value="Uganda">
+                                        <option value="Ukraine">
+                                        <option value="United Arab Emirates">
+                                        <option value="United Kingdom">
+                                        <option value="United States">
+                                        <option value="United States Minor Outlying Islands">
+                                        <option value="Uruguay">
+                                        <option value="Uzbekistan">
+                                        <option value="Vanuatu">
+                                        <option value="Venezuela">
+                                        <option value="Viet Nam">
+                                        <option value="Virgin Islands, British">
+                                        <option value="Virgin Islands, U.S">
+                                        <option value="Wallis and Futuna">
+                                        <option value="Western Sahara">
+                                        <option value="Yemen">
+                                        <option value="Zambia">
+                                        <option value="Zimbabwe">
                                     </datalist>
-                                    <input class="input_wraper__data" type="text" name="sex" placeholder="Sex" list="sex-li">
+                                    <input class="input_wraper__data" type="text" name="sex" placeholder="Sex"
+                                        list="sex-li">
                                     <datalist id="sex-li">
                                         <option>Feminin</option>
                                         <option>Masculin</option>
@@ -359,12 +369,17 @@ if(isset($_SESSION["email"])) {
                                 </div>
                                 <div class="input_wrapper_col">
                                     <input class="input_wraper__data" type="name" name="lname" placeholder="Prenume">
-                                    <input class="input_wraper__data" type="name" name="lnameBirth" placeholder="Prenume la naştere">
-                                    <input class="input_wraper__data" type="name" name="lnameDat" placeholder="Prenume tată">
-                                    <input class="input_wraper__data" type="name" name="lnameMom" placeholder="Prenume mamă">
-                                    <input class="input_wraper__data" type="text" name="idnp" placeholder="IDNP R.Moldova">
-                                    <input class="input_wraper__data" type="text" name="birthday" id="birthday" placeholder="Data nașterii">
-                                    
+                                    <input class="input_wraper__data" type="name" name="lnameBirth"
+                                        placeholder="Prenume la naştere">
+                                    <input class="input_wraper__data" type="name" name="lnameDat"
+                                        placeholder="Prenume tată">
+                                    <input class="input_wraper__data" type="name" name="lnameMom"
+                                        placeholder="Prenume mamă">
+                                    <input class="input_wraper__data" type="text" name="idnp"
+                                        placeholder="IDNP R.Moldova">
+                                    <input class="input_wraper__data" type="text" name="birthday" id="birthday"
+                                        placeholder="Data nașterii">
+
                                 </div>
                             </div> <!-- input_wrapper close -->
                         </div>
@@ -372,19 +387,188 @@ if(isset($_SESSION["email"])) {
                             <div class="input_col__title">Născut in</div>
                             <div class="input_wrapper-doc">
                                 <div class="input_wrapper_col--full">
-                                    <input class="input_wraper__data" type="text" name="countryBirth" placeholder="Ţară naştere" list="country">
+                                    <input class="input_wraper__data" type="text" name="countryBirth"
+                                        placeholder="Ţară naştere" list="country">
                                     <input class="input_wraper__data" type="text" name="region" placeholder="Regiune">
-                                    <input class="input_wraper__data" type="text" name="locality" placeholder="Localitate">
+                                    <input class="input_wraper__data" type="text" name="locality"
+                                        placeholder="Localitate">
                                 </div>
                             </div> <!-- input_wrapper-doc close -->
                         </div> <!-- input_col input_col--small close -->
                     </div> <!-- input_row close -->
+
+                    <div class="input_row">
+                        <div class="input_col">
+                            <div class="input_col__title">Document de identitate solicitant</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col col33">
+                                    <label class="label-info-input">Document de identitate emis de</label>
+                                    <div class="row">
+                                        <div class="emisde">
+                                            <input type="checkbox" name="checkEmisde" id="checkEmisde">
+                                            <label for="checkEmisde">R. Moldova</label>
+                                        </div>
+                                    </div> <!-- row close -->
+
+                                    <div class="row min50">
+                                        <input class="input_wraper__data hasDatepicker" name="docSerie" type="text"
+                                            placeholder="Serie document" list="doc_serie">
+                                        <datalist id="doc_serie">
+                                            <option>A</option>
+                                            <option>B</option>
+                                        </datalist>
+                                        <input class="input_wraper__data hasDatepicker" name="numDoc" type="text"
+                                            placeholder="Număr document">
+                                    </div> <!-- row close -->
+
+                                </div> <!-- input_wrapper_col col33 close -->
+                                <div class="input_wrapper_col col33">
+
+                                    <div class="row">
+                                        <div class="emisde">
+                                            <input class="input_wraper__data hasDatepicker" name="typeDoc" type="text"
+                                                placeholder="Tip document de identitate" list="doc_type">
+                                            <datalist id="doc_type">
+                                                <option>Buletin de identitate</option>
+                                                <option>Carte de identitate</option>
+                                                <option>Document de călătorie pentru refugiaţi/ apatrizi</option>
+                                                <option>Paşaport</option>
+                                                <option>Altul</option>
+                                            </datalist>
+                                        </div>
+                                    </div> <!-- row close -->
+
+                                    <div class="row min50">
+                                        <input class="input_wraper__data" type="text" name="emitDate" id="emitDate"
+                                            placeholder="Dată emitere">
+                                        <input class="input_wraper__data" type="text" name="expDate" id="expDate"
+                                            placeholder="Dată expirare">
+                                    </div> <!-- row close -->
+
+                                </div> <!-- input_wrapper_col col33 close -->
+                                <div class="input_wrapper_col col33">
+
+                                    <div class="row">
+                                        <div class="emisde">
+                                            <input type="checkbox" name="docValid" id="docValid">
+                                            <label for="docValid">Valabilitate nelimitată</label>
+                                        </div>
+                                    </div> <!-- row close -->
+                                    <div class="row ">
+                                        <input class="input_wraper__data hasDatepicker" name="emisDe" type="text"
+                                            placeholder="Emis de">
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->
+                            </div> <!-- input_wrapper close -->
+                        </div> <!-- input_col close -->
+                    </div> <!-- input_row close -->
+                    
+                    <div class="input_row">
+                        <div class="input_col">
+                            <div class="input_col__title">Adresa de domiciliu (aşa cum figurează în documentul de identitate, dacă sunteţi în posesia lui)</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col col33">
+                                    <div class="row">
+                                        <input class="input_wraper__data" type="text" name="countryHome" placeholder="Ţară" list="country">
+                                    </div> <!-- row close -->
+                                    <div class="row min50">
+                                        <input class="input_wraper__data hasDatepicker" name="strHome" type="text"
+                                            placeholder="Stradă">
+                                        <input class="input_wraper__data hasDatepicker" name="numHome" type="text"
+                                            placeholder="Număr">
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->
+                                <div class="input_wrapper_col col33">
+                                    <div class="row">
+                                        <input class="input_wraper__data hasDatepicker" name="regionHome" type="text" placeholder="Regiune adm. - teritorială">         
+                                    </div> <!-- row close -->
+
+                                    <div class="row min33">
+                                        <input class="input_wraper__data" type="text" name="blocHome" id="blocHome"
+                                            placeholder="Bloc">
+                                        <input class="input_wraper__data" type="text" name="etajHome" id="etajHome"
+                                            placeholder="Etaj">
+                                            <input class="input_wraper__data" type="text" name="scarHome" id="scarHome"
+                                            placeholder="Scară">
+                                    </div> <!-- row close -->
+
+                                </div> <!-- input_wrapper_col col33 close -->
+                                <div class="input_wrapper_col col33">
+                                    <div class="row">
+                                        <input class="input_wraper__data" type="text" name="localityForeignHome" placeholder="Localitate Străinatate">
+                                    </div> <!-- row close -->
+                                    <div class="row min50">
+                                        <input class="input_wraper__data hasDatepicker" name="apartmentHome" type="text"
+                                            placeholder="Apartament">
+                                        <input class="input_wraper__data hasDatepicker" name="zipCodeHome" type="text"
+                                            placeholder="Cod poștal">
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->
+                            </div> <!-- input_wrapper close -->
+                        </div> <!-- input_col close -->
+                    </div> <!-- input_row close -->
+
+                    <div class="input_row">
+                        <div class="input_col">
+                            <div class="input_col__title">Reşedinţa/Adresa la care locuiţi în străinătate. Se va completa în mod obligatoriu adresa de reşedinţă/ adresa la care locuiţi sau vă aflaţi temporar în străinătate</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col col33">
+                                    <div class="row">
+                                        <input class="input_wraper__data" type="text" name="countryForeign" placeholder="Ţară" list="country">
+                                    </div> <!-- row close -->
+                                    <div class="row min50">
+                                        <input class="input_wraper__data hasDatepicker" name="strForeign" type="text"
+                                            placeholder="Stradă">
+                                        <input class="input_wraper__data hasDatepicker" name="numForeign" type="text"
+                                            placeholder="Număr">
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->
+                                <div class="input_wrapper_col col33">
+                                    <div class="row">
+                                        <input class="input_wraper__data hasDatepicker" name="regionForeign" type="text" placeholder="Regiune adm. - teritorială">         
+                                    </div> <!-- row close -->
+
+                                    <div class="row min33">
+                                        <input class="input_wraper__data" type="text" name="blocForeign" id="blocForeign"
+                                            placeholder="Bloc">
+                                        <input class="input_wraper__data" type="text" name="etajForeign" id="etajForeign"
+                                            placeholder="Etaj">
+                                            <input class="input_wraper__data" type="text" name="scarForeign" id="scarForeign"
+                                            placeholder="Scară">
+                                    </div> <!-- row close -->
+
+                                </div> <!-- input_wrapper_col col33 close -->
+                                <div class="input_wrapper_col col33">
+                                    <div class="row">
+                                        <input class="input_wraper__data" type="text" name="localityForeign2" placeholder="Localitate Străinatate">
+                                    </div> <!-- row close -->
+                                    <div class="row min50">
+                                        <input class="input_wraper__data hasDatepicker" name="apartmentForeign" type="text"
+                                            placeholder="Apartament">
+                                        <input class="input_wraper__data hasDatepicker" name="zipCodeForeign" type="text"
+                                            placeholder="Cod poștal">
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->
+                            </div> <!-- input_wrapper close -->
+                        </div> <!-- input_col close -->
+                    </div> <!-- input_row close -->
+
+                    <div class="input_row">
+                        <div class="input_col">
+                            <div class="input_col__title">Reşedinţa/Adresa la care locuiţi în străinătate. Se va completa în mod obligatoriu adresa de reşedinţă/ adresa la care locuiţi sau vă aflaţi temporar în străinătate</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col--full">
+                                    <div class="row min50">
+                                        <input class="input_wraper__data" type="tel" name="tel" placeholder="Telefon">
+                                        <input class="input_wraper__data" type="email" name="email" placeholder="Email">
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->  
+                            </div> <!-- input_wrapper close -->
+                        </div> <!-- input_col close -->
+                    </div> <!-- input_row close -->
                 </form>
-
-
-
                 <div class="create-btn">
-                    <a href="docDataIn.php" class="panel__btn"><i class="fas fa-address-card">Cerere</i></a>
+                    <a href="docDataIn.php" class="panel__btn"><i class="fas fa-save">Save</i></a>
                 </div>
             </div> <!-- contact__wrapper close -->
         </div> <!-- container close -->
