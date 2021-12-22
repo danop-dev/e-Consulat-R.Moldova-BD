@@ -1188,21 +1188,15 @@ span input:hover{
     border: 1px solid green;
 }
 
-
-
-
-
 .hello{
     color: #0353a3;
     line-height: 1.4;
+    max-width: 300px;
 }
 
 .hello b{
     font-style: italic;
 }
-
-
-
 
 /* ### INPUT DATA PAHE PHP  ### */
 

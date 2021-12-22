@@ -46,7 +46,8 @@ $(document).ready(function () {
     });
 
 
-    $("#birthday").datepicker({ dateFormat: 'dd.mm.yy' });
-    $("#emitDate").datepicker({ dateFormat: 'dd.mm.yy' });
-    $("#expDate").datepicker({ dateFormat: 'dd.mm.yy' });
+    $("#birthday").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#emitDate").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#expDate").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#birthdayCopil").datepicker({ dateFormat: 'yy-mm-dd' });
 });

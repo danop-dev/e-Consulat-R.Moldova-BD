@@ -102,22 +102,24 @@ if(isset($_SESSION["email"])) {
                 <div class="box_wrapper-title"> Cererile mele <br>
                     <hr>
                 </div>
-
+                <div class="alert-info"></div>
                 <form action="#" method="POST">
                     <div class="input_row">
                         <div class="input_col input_col--big">
                             <div class="input_col__title">Date de identitate ale solicitantului</div>
                             <div class="input_wrapper-doc">
                                 <div class="input_wrapper_col">
-                                    <input class="input_wraper__data" type="name" name="fname"
+                                    <input class="input_wraper__data" type="name" name="fname" id="fname"
                                         placeholder="Nume Familie">
-                                    <input class="input_wraper__data" type="name" name="fnameBirth"
+                                    <input class="input_wraper__data" type="name" name="fnameBirth" id="fnameBirth"
                                         placeholder="Nume la naştere">
-                                    <input class="input_wraper__data" type="name" name="fnameDat"
+                                    <input class="input_wraper__data" type="name" name="fnameDad" id="fnameDad"
                                         placeholder="Nume familie tată">
-                                    <input class="input_wraper__data" type="name" name="fnameMom"
+                                    <input class="input_wraper__data" type="name" name="fnameMom" id="fnameMom"
                                         placeholder="Nume familie mamă">
-                                    <input class="input_wraper__data" type="text" name="cetatenie"
+                                    <input class="input_wraper__data" type="text" name="idnpMom" id="idnpMom"
+                                        placeholder="IDNP mamă">
+                                    <input class="input_wraper__data" type="text" name="cetatenie" id="cetatenie"
                                         placeholder="Cetăţean al statului" list="country">
                                     <datalist id="country">
                                         <option value="Afghanistan">
@@ -360,7 +362,7 @@ if(isset($_SESSION["email"])) {
                                         <option value="Zambia">
                                         <option value="Zimbabwe">
                                     </datalist>
-                                    <input class="input_wraper__data" type="text" name="sex" placeholder="Sex"
+                                    <input class="input_wraper__data" type="text" name="sex" id="sex" placeholder="Sex"
                                         list="sex-li">
                                     <datalist id="sex-li">
                                         <option>Feminin</option>
@@ -368,14 +370,16 @@ if(isset($_SESSION["email"])) {
                                     </datalist>
                                 </div>
                                 <div class="input_wrapper_col">
-                                    <input class="input_wraper__data" type="name" name="lname" placeholder="Prenume">
-                                    <input class="input_wraper__data" type="name" name="lnameBirth"
+                                    <input class="input_wraper__data" type="name" name="lname" id="lname" placeholder="Prenume">
+                                    <input class="input_wraper__data" type="name" name="lnameBirth" id="lnameBirth"
                                         placeholder="Prenume la naştere">
-                                    <input class="input_wraper__data" type="name" name="lnameDat"
+                                    <input class="input_wraper__data" type="name" name="lnameDad" id="lnameDad"
                                         placeholder="Prenume tată">
-                                    <input class="input_wraper__data" type="name" name="lnameMom"
+                                    <input class="input_wraper__data" type="name" name="lnameMom" id="lnameMom"
                                         placeholder="Prenume mamă">
-                                    <input class="input_wraper__data" type="text" name="idnp"
+                                    <input class="input_wraper__data" type="text" name="idnpDad" id="idnpDad"
+                                        placeholder="IDNP tată">
+                                    <input class="input_wraper__data" type="text" name="idnp" id="idnp"
                                         placeholder="IDNP R.Moldova">
                                     <input class="input_wraper__data" type="text" name="birthday" id="birthday"
                                         placeholder="Data nașterii">
@@ -387,10 +391,10 @@ if(isset($_SESSION["email"])) {
                             <div class="input_col__title">Născut in</div>
                             <div class="input_wrapper-doc">
                                 <div class="input_wrapper_col--full">
-                                    <input class="input_wraper__data" type="text" name="countryBirth"
+                                    <input class="input_wraper__data" type="text" name="countryBirth" id="countryBirth"
                                         placeholder="Ţară naştere" list="country">
-                                    <input class="input_wraper__data" type="text" name="region" placeholder="Regiune">
-                                    <input class="input_wraper__data" type="text" name="locality"
+                                    <input class="input_wraper__data" type="text" name="region" id="region" placeholder="Regiune">
+                                    <input class="input_wraper__data" type="text" name="locality" id="locality"
                                         placeholder="Localitate">
                                 </div>
                             </div> <!-- input_wrapper-doc close -->
@@ -411,13 +415,13 @@ if(isset($_SESSION["email"])) {
                                     </div> <!-- row close -->
 
                                     <div class="row min50">
-                                        <input class="input_wraper__data hasDatepicker" name="docSerie" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="docSerie" id="docSerie" type="text"
                                             placeholder="Serie document" list="doc_serie">
                                         <datalist id="doc_serie">
                                             <option>A</option>
                                             <option>B</option>
                                         </datalist>
-                                        <input class="input_wraper__data hasDatepicker" name="numDoc" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="numDoc" id="numDoc" type="text"
                                             placeholder="Număr document">
                                     </div> <!-- row close -->
 
@@ -426,7 +430,7 @@ if(isset($_SESSION["email"])) {
 
                                     <div class="row">
                                         <div class="emisde">
-                                            <input class="input_wraper__data hasDatepicker" name="typeDoc" type="text"
+                                            <input class="input_wraper__data hasDatepicker" name="typeDoc" id="typeDoc" type="text"
                                                 placeholder="Tip document de identitate" list="doc_type">
                                             <datalist id="doc_type">
                                                 <option>Buletin de identitate</option>
@@ -455,7 +459,7 @@ if(isset($_SESSION["email"])) {
                                         </div>
                                     </div> <!-- row close -->
                                     <div class="row ">
-                                        <input class="input_wraper__data hasDatepicker" name="emisDe" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="emisDe" id="emisDe" type="text"
                                             placeholder="Emis de">
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->
@@ -469,18 +473,18 @@ if(isset($_SESSION["email"])) {
                             <div class="input_wrapper-doc">
                                 <div class="input_wrapper_col col33">
                                     <div class="row">
-                                        <input class="input_wraper__data" type="text" name="countryHome" placeholder="Ţară" list="country">
+                                        <input class="input_wraper__data" type="text" name="countryHome" id="countryHome" placeholder="Ţară" list="country">
                                     </div> <!-- row close -->
                                     <div class="row min50">
-                                        <input class="input_wraper__data hasDatepicker" name="strHome" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="strHome" id="strHome" type="text"
                                             placeholder="Stradă">
-                                        <input class="input_wraper__data hasDatepicker" name="numHome" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="numHome" id="numHome" type="text"
                                             placeholder="Număr">
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->
                                 <div class="input_wrapper_col col33">
                                     <div class="row">
-                                        <input class="input_wraper__data hasDatepicker" name="regionHome" type="text" placeholder="Regiune adm. - teritorială">         
+                                        <input class="input_wraper__data hasDatepicker" name="regionHome" id="regionHome" type="text" placeholder="Regiune adm. - teritorială">         
                                     </div> <!-- row close -->
 
                                     <div class="row min33">
@@ -495,13 +499,12 @@ if(isset($_SESSION["email"])) {
                                 </div> <!-- input_wrapper_col col33 close -->
                                 <div class="input_wrapper_col col33">
                                     <div class="row">
-                                        <input class="input_wraper__data" type="text" name="localityForeignHome" placeholder="Localitate Străinatate">
+                                        <input class="input_wraper__data" type="text" name="localityForeignHome" id="localityForeignHome" placeholder="Localitate Străinatate">
                                     </div> <!-- row close -->
                                     <div class="row min50">
-                                        <input class="input_wraper__data hasDatepicker" name="apartmentHome" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="apartmentHome" id="apartmentHome" type="text"
                                             placeholder="Apartament">
-                                        <input class="input_wraper__data hasDatepicker" name="zipCodeHome" type="text"
-                                            placeholder="Cod poștal">
+                                        <input class="input_wraper__data hasDatepicker" name="zipCodeHome" id="zipCodeHome" type="text" placeholder="Cod poștal">
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->
                             </div> <!-- input_wrapper close -->
@@ -514,18 +517,18 @@ if(isset($_SESSION["email"])) {
                             <div class="input_wrapper-doc">
                                 <div class="input_wrapper_col col33">
                                     <div class="row">
-                                        <input class="input_wraper__data" type="text" name="countryForeign" placeholder="Ţară" list="country">
+                                        <input class="input_wraper__data" type="text" name="countryForeign" id="countryForeign" placeholder="Ţară" list="country">
                                     </div> <!-- row close -->
                                     <div class="row min50">
-                                        <input class="input_wraper__data hasDatepicker" name="strForeign" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="strForeign" id="strForeign" type="text"
                                             placeholder="Stradă">
-                                        <input class="input_wraper__data hasDatepicker" name="numForeign" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="numForeign" id="numForeign" type="text"
                                             placeholder="Număr">
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->
                                 <div class="input_wrapper_col col33">
                                     <div class="row">
-                                        <input class="input_wraper__data hasDatepicker" name="regionForeign" type="text" placeholder="Regiune adm. - teritorială">         
+                                        <input class="input_wraper__data hasDatepicker" name="regionForeign" id="regionForeign" type="text" placeholder="Regiune adm. - teritorială">         
                                     </div> <!-- row close -->
 
                                     <div class="row min33">
@@ -540,13 +543,13 @@ if(isset($_SESSION["email"])) {
                                 </div> <!-- input_wrapper_col col33 close -->
                                 <div class="input_wrapper_col col33">
                                     <div class="row">
-                                        <input class="input_wraper__data" type="text" name="localityForeign2" placeholder="Localitate Străinatate">
+                                        <input class="input_wraper__data" type="text" name="localityForeign2" id="localityForeign2"
+                                        placeholder="Localitate Străinatate">
                                     </div> <!-- row close -->
                                     <div class="row min50">
-                                        <input class="input_wraper__data hasDatepicker" name="apartmentForeign" type="text"
+                                        <input class="input_wraper__data hasDatepicker" name="apartmentForeign" id="apartmentForeign" type="text"
                                             placeholder="Apartament">
-                                        <input class="input_wraper__data hasDatepicker" name="zipCodeForeign" type="text"
-                                            placeholder="Cod poștal">
+                                        <input class="input_wraper__data hasDatepicker" name="zipCodeForeign" id="zipCodeForeign" type="text" placeholder="Cod poștal">
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->
                             </div> <!-- input_wrapper close -->
@@ -555,21 +558,79 @@ if(isset($_SESSION["email"])) {
 
                     <div class="input_row">
                         <div class="input_col">
-                            <div class="input_col__title">Reşedinţa/Adresa la care locuiţi în străinătate. Se va completa în mod obligatoriu adresa de reşedinţă/ adresa la care locuiţi sau vă aflaţi temporar în străinătate</div>
+                            <div class="input_col__title">Date de contact</div>
                             <div class="input_wrapper-doc">
                                 <div class="input_wrapper_col--full">
                                     <div class="row min50">
-                                        <input class="input_wraper__data" type="tel" name="tel" placeholder="Telefon">
-                                        <input class="input_wraper__data" type="email" name="email" placeholder="Email">
+                                        <input class="input_wraper__data" type="tel" name="telData" id="telData" placeholder="Telefon">
+                                        <input class="input_wraper__data" type="email" name="emailData" id="emailData" placeholder="Email">
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->  
                             </div> <!-- input_wrapper close -->
                         </div> <!-- input_col close -->
                     </div> <!-- input_row close -->
+
+                    <div class="input_row">
+                        <div class="input_col input_col--big">
+                            <div class="input_col__title">Date de identitate copil</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col">
+                                    <input class="input_wraper__data" type="name" name="fnameCopil" id="fnameCopil"
+                                        placeholder="Nume Copil">
+                                    <input class="input_wraper__data" type="text" name="cetatenieCopil" id="cetatenieCopil"
+                                        placeholder="Cetăţean al statului" list="country">
+                                    <input class="input_wraper__data" type="text" name="sexCopil" id="sexCopil" placeholder="Sex" list="sex-li">
+                                </div>
+                                <div class="input_wrapper_col">
+                                    <input class="input_wraper__data" type="name" name="lnameCopil" id="lnameCopil" placeholder="Prenume Copil">
+                                    <input class="input_wraper__data" type="text" name="idnpCopil" id="idnpCopil"
+                                        placeholder="IDNP R.Moldova">
+                                    <input class="input_wraper__data" type="text" name="birthdayCopil" id="birthdayCopil" placeholder="Data nașterii">
+                                </div>
+                            </div> <!-- input_wrapper close -->
+                        </div>
+                        <div class="input_col input_col--small">
+                            <div class="input_col__title">Născut (Copil)</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col--full">
+                                    <input class="input_wraper__data" type="text" name="countryBirthCopil" id="countryBirthCopil"
+                                        placeholder="Ţară naştere" list="country">
+                                    <input class="input_wraper__data" type="text" name="regionCopil" id="regionCopil" placeholder="Regiune">
+                                    <input class="input_wraper__data" type="text" name="localityCopil" id="localityCopil" placeholder="Localitate">
+                                </div>
+                            </div> <!-- input_wrapper-doc close -->
+                        </div> <!-- input_col input_col--small close -->
+                    </div> <!-- input_row close -->
+
+                    <div class="input_row">
+                        <div class="input_col" style="width: 60%;">
+                            <div class="input_col__title">Taxa</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col--full">
+                                    <input class="input_wraper__data" type="text" name="payMod" id="payMod"
+                                        placeholder="Modalitatea de achitare" list="payMod-li">
+                                        <datalist id="payMod-li">
+                                            <option>Banca</option>
+                                            <option>Transfer bancar</option>
+                                            <option>Online</option>
+                                            <option>Card</option>
+                                        </datalist>
+                                    <input class="input_wraper__data" type="text" name="currency" id="currency" placeholder="Valuta" list="currency-li">
+                                    <datalist id="currency-li">
+                                        <option>MDA</option>
+                                        <option>EUR</option>
+                                        <option>USD</option>
+                                        <option>RON</option>
+                                        <option>Alte</option>
+                                    </datalist>
+
+                                    <input class="input_wraper__data" type="text" name="tax" id="tax" placeholder="0" disabled>
+                                </div>
+                            </div> <!-- input_wrapper-doc close -->
+                        </div> <!-- input_col input_col--small close -->
+                    </div> <!-- input_row close -->
+                    <input type="submit" id="submitData" class="panel__btn" value="Save" style="font-weight: 900;">
                 </form>
-                <div class="create-btn">
-                    <a href="docDataIn.php" class="panel__btn"><i class="fas fa-save">Save</i></a>
-                </div>
             </div> <!-- contact__wrapper close -->
         </div> <!-- container close -->
     </section> <!-- register close -->
@@ -578,16 +639,16 @@ if(isset($_SESSION["email"])) {
         <div class="container">
             <ul class="service__nav-ul">
                 <li class="service__nav-item">
-                    <a class="service__nav-link" href="index.html">Servicii Consulare</a>
+                    <a class="service__nav-link" href="../index.html">Servicii Consulare</a>
                 </li>
                 <li class="service__nav-item">
-                    <a class="service__nav-link" href="howWork.html">Cum functioneaza sistemul</a>
+                    <a class="service__nav-link" href="../howWork.html">Cum functioneaza sistemul</a>
                 </li>
                 <li class="service__nav-item">
-                    <a class="service__nav-link" href="contact.html">Centrul de contact şi suport</a>
+                    <a class="service__nav-link" href="../contact.html">Centrul de contact şi suport</a>
                 </li>
                 <li class="service__nav-item">
-                    <a class="service__nav-link" href="#header">Condiţii de utilizare / Condiţii legale</a>
+                    <a class="service__nav-link" href="../terms.html">Condiţii de utilizare / Condiţii legale</a>
                 </li>
             </ul>
         </div> <!-- container close-->
@@ -695,6 +756,7 @@ if(isset($_SESSION["email"])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/data.js"></script>
 </body>
 
 </html>

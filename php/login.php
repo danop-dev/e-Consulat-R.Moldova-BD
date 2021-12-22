@@ -33,6 +33,8 @@ if(!empty($_POST["login_email"]) && !empty($_POST["login_psw"])){
     } else {
         echo json_encode(array('statusCode' => 201));
     }
+} else {
+    echo json_encode(array('statusCode' => 204));
 }
 
 ?>
