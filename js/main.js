@@ -50,4 +50,5 @@ $(document).ready(function () {
     $("#emitDate").datepicker({ dateFormat: 'yy-mm-dd' });
     $("#expDate").datepicker({ dateFormat: 'yy-mm-dd' });
     $("#birthdayCopil").datepicker({ dateFormat: 'yy-mm-dd' });
+    
 });

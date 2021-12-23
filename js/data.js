@@ -79,12 +79,16 @@ $("#submitData").click(function(e){
 
     //input value data
 
+    //row
+    let officeConsul        = $("#officeConsul").val();
+    let serviceConsul       = $("#serviceConsul").val();
+
     // row
     let fname               = $("#fname").val();
     let fnameBirth          = $("#fnameBirth").val();
     let fnameDad            = $("#fnameDad").val();
     let fnameMom            = $("#fnameMom").val();
-    let idnpMom              = $('#idnpMom').val();
+    let idnpMom             = $('#idnpMom').val();
     let cetatenie           = $("#cetatenie").val();
     let sex                 = $("#sex").val();
       
@@ -165,6 +169,10 @@ $("#submitData").click(function(e){
         type: 'POST',
         url: '../php/server.php',
         data:{
+
+            officeConsul: officeConsul,
+            serviceConsul: serviceConsul,
+
             fname: fname,
             fnameBirth: fnameBirth,
             fnameDad: fnameDad,
@@ -246,10 +254,13 @@ $("#submitData").click(function(e){
             if(response.statusCode == 200){
                 $('.alert-info').html('SUCCES');
                 $('.alert-info').addClass('alert-info--succes');
-                
-                //location.replace("http://localhost/TEZA%20DE%20AN%20BD/php/dosar.php");
+                location.replace("http://localhost/TEZA%20DE%20AN%20BD/php/dosar.php");
             } else if(response.statusCode == 201){
-                $('.alert-info').html('Erroare: Ceva a fost introdusa incorect');
+                $('.alert-info').html('Erroare: Ceva a fost introdusa incorect.');
+                $('.alert-info').addClass('alert-info--error');
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            } else if(response.statusCode == 204){
+                $('.alert-info').html('Erroare: Ceva nu a fost introdus.');
                 $('.alert-info').addClass('alert-info--error');
                 $("html, body").animate({ scrollTop: 0 }, "slow");
             }

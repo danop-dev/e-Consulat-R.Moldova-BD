@@ -45,6 +45,7 @@ CREATE TABLE adresa_resedinta (
 
 CREATE TABLE doc_identitate (
 	id_doc_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    IDNP int(20),
     doc_md BOOLEAN,
     seria varchar(2),
     nr_serie int(10),
@@ -219,3 +220,335 @@ VALUES
     ('Card', "EUR", 150),
     ('Online', "MDA", 15000),
     ('Cash', "US", 200);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DROP DATABASE IF EXISTS consulat;
+CREATE DATABASE consulat;
+USE  consulat;
+
+CREATE TABLE adresa_nastere (
+    id_nastere int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tara varchar(20),
+    regiunea varchar(20),
+    localitatea varchar(20),
+    strada varchar(50),
+    numar int(10),
+    bloc int(6),
+    etaj int(3),
+    scara int(3),
+    apartament int(4),
+    cod_postal int(6)
+);
+
+CREATE TABLE adresa_domiciliu (
+    id_domiciliu int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tara varchar(20),
+    regiunea varchar(20),
+    localitatea varchar(20),
+    strada varchar(50),
+    numar int(10),
+    bloc int(6),
+    etaj int(3),
+    scara int(3),
+    apartament int(4),
+    cod_postal int(6)
+);
+
+CREATE TABLE adresa_resedinta (
+    id_resedinta int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tara varchar(20),
+    regiunea varchar(20),
+    localitatea varchar(20),
+    strada varchar(50),
+    numar int(10),
+    bloc int(6),
+    etaj int(3),
+    scara int(3),
+    apartament int(4),
+    cod_postal int(6)
+);
+
+CREATE TABLE doc_identitate (
+	id_doc_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    IDNP int(20),
+    doc_md BOOLEAN,
+    seria varchar(2),
+    nr_serie int(10),
+    tip_doc varchar(100),
+    data_emitere DATE,
+    data_expiratie DATE,
+    valabilitatea_infinit BOOLEAN,
+    emis varchar(20)
+    
+);
+
+CREATE TABLE date_identitate (
+    id_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nume varchar(40),
+    prenume varchar(40),
+    sex varchar(10),
+    data_nasterii DATE,
+    cetatenia varchar(10),
+    id_doc_identitate int,
+    email varchar(30),
+    telefon int(20),
+    
+    FOREIGN KEY (id_doc_identitate) REFERENCES doc_identitate(id_doc_identitate) ON DELETE CASCADE
+);
+
+CREATE TABLE parinti (
+    id_parinti int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nume varchar(40),
+    prenume varchar(40),
+    gen_parinte varchar(10),
+    id_identitate_parinte int,
+    
+    FOREIGN KEY (id_identitate_parinte) REFERENCES date_identitate(id_identitate) ON DELETE CASCADE
+);
+
+CREATE TABLE copii_minori (
+    id_copii int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nume varchar(40),
+    prenume varchar(40),
+    id_identitate_copil int,
+    id_nastere_minor int,
+        
+    FOREIGN KEY (id_identitate_copil) REFERENCES date_identitate(id_identitate) ON DELETE CASCADE,
+    FOREIGN KEY (id_nastere_minor) REFERENCES adresa_nastere(id_nastere) ON DELETE CASCADE
+);
+
+CREATE TABLE users(
+	id_user int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email varchar(30),
+    fname varchar(20),
+    lname varchar(20),
+    psw varchar(256) 
+);
+
+CREATE TABLE taxa(
+	id_taxa int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    modalitate varchar(30),
+    valuta varchar(10),
+    taxa int(8)
+);
+
+CREATE TABLE cereri (
+    id_cereri int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cod_cerere varchar(20),
+    servicii_consulat varchar(100),
+    oficiul_consulat varchar(100),
+    data_programarii DATE,
+    data_cerere DATE,
+    id_identitate int,
+    id_nastere int,
+    id_domiciliu int,
+    id_resedinta int,
+    id_parinti int,
+    id_copii int,
+    id_user int,
+    id_taxa int,
+    
+    FOREIGN KEY (id_identitate) REFERENCES date_identitate(id_identitate) ON DELETE CASCADE,
+    FOREIGN KEY (id_nastere) REFERENCES adresa_nastere(id_nastere) ON DELETE CASCADE,
+    FOREIGN KEY (id_domiciliu) REFERENCES adresa_domiciliu(id_domiciliu) ON DELETE CASCADE,
+    FOREIGN KEY (id_resedinta) REFERENCES adresa_resedinta(id_resedinta) ON DELETE CASCADE,
+    FOREIGN KEY (id_parinti) REFERENCES parinti(id_parinti) ON DELETE CASCADE,
+    FOREIGN KEY (id_copii) REFERENCES copii_minori(id_copii) ON DELETE CASCADE,
+    FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE,
+    FOREIGN KEY (id_taxa) REFERENCES taxa(id_taxa) ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DROP DATABASE IF EXISTS consulat;
+CREATE DATABASE consulat;
+USE  consulat;
+
+CREATE TABLE adresa_nastere (
+    id_nastere int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tara varchar(20),
+    regiunea varchar(20),
+    localitatea varchar(20),
+    strada varchar(50),
+    numar int(10),
+    bloc int(6),
+    etaj int(3),
+    scara int(3),
+    apartament int(4),
+    cod_postal int(6)
+);
+
+CREATE TABLE adresa_domiciliu (
+    id_domiciliu int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tara varchar(20),
+    regiunea varchar(20),
+    localitatea varchar(20),
+    strada varchar(50),
+    numar int(10),
+    bloc int(6),
+    etaj int(3),
+    scara int(3),
+    apartament int(4),
+    cod_postal int(6)
+);
+
+CREATE TABLE adresa_resedinta (
+    id_resedinta int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tara varchar(20),
+    regiunea varchar(20),
+    localitatea varchar(20),
+    strada varchar(50),
+    numar int(10),
+    bloc int(6),
+    etaj int(3),
+    scara int(3),
+    apartament int(4),
+    cod_postal int(6)
+);
+
+CREATE TABLE doc_identitate (
+	id_doc_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    IDNP int(20),
+    doc_md BOOLEAN,
+    seria varchar(2),
+    nr_serie int(10),
+    tip_doc varchar(100),
+    data_emitere DATE,
+    data_expiratie DATE,
+    valabilitatea_infinit BOOLEAN,
+    emis varchar(20)
+    
+);
+
+CREATE TABLE date_identitate (
+    id_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nume varchar(40),
+    prenume varchar(40),
+    sex varchar(10),
+    data_nasterii DATE,
+    cetatenia varchar(10),
+    id_doc_identitate int,
+    email varchar(30),
+    telefon int(20),
+    
+    FOREIGN KEY (id_doc_identitate) REFERENCES doc_identitate(id_doc_identitate) ON DELETE CASCADE
+);
+
+CREATE TABLE parinti (
+    id_parinti int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_identitate_mama int,
+    id_identitate_tata int,
+    
+    FOREIGN KEY (id_identitate_mama) REFERENCES date_identitate(id_identitate) ON DELETE CASCADE,
+    FOREIGN KEY (id_identitate_tata) REFERENCES date_identitate(id_identitate) ON DELETE CASCADE
+);
+
+CREATE TABLE copii_minori (
+    id_copii int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nume varchar(40),
+    prenume varchar(40),
+    id_identitate_copil int,
+    id_nastere_minor int,
+        
+    FOREIGN KEY (id_identitate_copil) REFERENCES date_identitate(id_identitate) ON DELETE CASCADE,
+    FOREIGN KEY (id_nastere_minor) REFERENCES adresa_nastere(id_nastere) ON DELETE CASCADE
+);
+
+CREATE TABLE users(
+	id_user int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email varchar(30),
+    fname varchar(20),
+    lname varchar(20),
+    psw varchar(256) 
+);
+
+CREATE TABLE taxa(
+	id_taxa int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    modalitate varchar(30),
+    valuta varchar(10),
+    taxa int(8)
+);
+
+CREATE TABLE cereri (
+    id_cereri int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cod_cerere varchar(20),
+    servicii_consulat varchar(100),
+    oficiul_consulat varchar(100),
+    data_programarii DATE,
+    data_cerere DATE,
+    id_identitate int,
+    id_nastere int,
+    id_domiciliu int,
+    id_resedinta int,
+    id_parinti int,
+    id_copii int,
+    id_user int,
+    id_taxa int,
+    
+    FOREIGN KEY (id_identitate) REFERENCES date_identitate(id_identitate) ON DELETE CASCADE,
+    FOREIGN KEY (id_nastere) REFERENCES adresa_nastere(id_nastere) ON DELETE CASCADE,
+    FOREIGN KEY (id_domiciliu) REFERENCES adresa_domiciliu(id_domiciliu) ON DELETE CASCADE,
+    FOREIGN KEY (id_resedinta) REFERENCES adresa_resedinta(id_resedinta) ON DELETE CASCADE,
+    FOREIGN KEY (id_parinti) REFERENCES parinti(id_parinti) ON DELETE CASCADE,
+    FOREIGN KEY (id_copii) REFERENCES copii_minori(id_copii) ON DELETE CASCADE,
+    FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE,
+    FOREIGN KEY (id_taxa) REFERENCES taxa(id_taxa) ON DELETE CASCADE
+);

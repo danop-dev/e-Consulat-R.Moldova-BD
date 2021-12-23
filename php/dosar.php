@@ -1,4 +1,7 @@
 <?php
+
+include 'conectbd.php';
+
 session_start();
 
 if(isset($_SESSION["email"])) {
@@ -98,66 +101,56 @@ if(isset($_SESSION["email"])) {
                     <hr>
                 </div>
                 <div class="box__scroll">
-                    <div class="doc__item">
-                        <div class="doc__box">
-                            <div class="doc__left">
-                                <ul class="doc__list">
-                                    <li class="doc__list-item">
-                                        <b>Cod cerere:</b> PE4504350
-                                    </li>
-                                    <li class="doc__list-item">
-                                        <b>Serviciu consular solicitat:</b> Înscriere certificat de naştere R.Moldova
-                                    </li>
-                                    <li class="doc__list-item">
-                                        <b>Misiunea diplomatica/oficiul consular:</b> Chişinău
-                                    </li>
-                                    <li class="doc__list-item">
-                                        <b>Data și ora programării:</b> 06.11.2020 - 09:40
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="doc__right">
-                                <div>Dată cerere</div>
-                                <b>29/12/2019</b>
-                                <div class="doc__alert">
-                                    <p>-</p>
+
+                <?php 
+
+                    $conbd = connect();
+                    
+                    
+                    $queryRequest = "SELECT * FROM cereri JOIN users ON cereri.id_user = users.id_user AND users.email='$email'";  
+                    $result = mysqli_query($conbd, $queryRequest);
+
+                    
+                    while($row = mysqli_fetch_array($result)) {
+                        echo '<div class="doc__item">
+                                <div class="doc__box">
+                                    <div class="doc__left">
+                                        <ul class="doc__list">
+                                            <li class="doc__list-item">
+                                                <b>Cod cerere:</b> '.$row["cod_cerere"].'
+                                            </li>
+                                            <li class="doc__list-item">
+                                                <b>Serviciu consular solicitat:</b> '.$row["servicii_consulat"].'
+                                            </li>
+                                            <li class="doc__list-item">
+                                                <b>Misiunea diplomatica/oficiul consular:</b> '.$row["oficiul_consulat"].'
+                                            </li>
+                                            <li class="doc__list-item">
+                                                <b>Data programării:</b> '.$row["data_programarii"].' 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="doc__right">
+                                        <div>Dată cerere</div>
+                                        <b>'.$row["data_cerere"].'</b>
+                                        <div class="doc__alert">
+                                            <p>In procesare</p>
+                                        </div>
+                                    </div>
+                                </div> <!-- doc__box close -->
+                                <div class="info-btn-row">
+                                    <a href="#" class="panel__btn btn_request"><i class="fas fa-file-alt">Detalii cerere</i></a>
                                 </div>
-                            </div>
-                        </div> <!-- doc__item close -->
-                        <div class="info-btn-row">
-                            <a href="#" class="panel__btn"><i class="fas fa-file-alt">Detalii cerere</i></a>
-                        </div>
-                    </div> <!-- doc__item close -->
-                    <div class="doc__item">
-                        <div class="doc__box">
-                            <div class="doc__left">
-                                <ul class="doc__list">
-                                    <li class="doc__list-item">
-                                        <b>Cod cerere:</b> PE4504350
-                                    </li>
-                                    <li class="doc__list-item">
-                                        <b>Serviciu consular solicitat:</b> Înscriere certificat de naştere R.Moldova
-                                    </li>
-                                    <li class="doc__list-item">
-                                        <b>Misiunea diplomatica/oficiul consular:</b> Chişinău
-                                    </li>
-                                    <li class="doc__list-item">
-                                        <b>Data și ora programării:</b> 06.11.2020 - 09:40
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="doc__right">
-                                <div>Dată cerere</div>
-                                <b>29/12/2019</b>
-                                <div class="doc__alert">
-                                    <p>-</p>
-                                </div>
-                            </div>
-                        </div> <!-- doc__item close -->
-                        <div class="info-btn-row">
-                            <a href="#" class="panel__btn"><i class="fas fa-file-alt">Detalii cerere</i></a>
-                        </div>
-                    </div> <!-- doc__item close -->
+                            </div> <!-- doc__item close --> ';
+                    
+                    }
+
+                    
+                    mysqli_close($conbd);
+                ?>
+
+
+                    
 
                 </div> <!-- box__scroll close  --> 
                 <div class="create-btn">

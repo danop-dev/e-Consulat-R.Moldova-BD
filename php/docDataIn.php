@@ -1,11 +1,11 @@
-<!-- <?php
-session_start();
+<?php
 
+session_start();
 if(isset($_SESSION["email"])) {
     $email = $_SESSION["email"];
 }
 
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="ro">
@@ -104,6 +104,193 @@ if(isset($_SESSION["email"])) {
                 </div>
                 <div class="alert-info"></div>
                 <form action="#" method="POST">
+                    
+                <div class="input_row">
+                        <div class="input_col">
+                            <div class="input_col__title">Arondare misiune diplomatică</div>
+                            <div class="input_wrapper-doc">
+                                <div class="input_wrapper_col">
+                                    <div class="row">
+                                        <input class="input_wraper__data hasDatepicker" name="officeConsul" id="officeConsul" type="text"
+                                            placeholder="Oficiul consulat" list="city-li">
+                                            <datalist id="city-li">
+                                                <option>Abu Dhabi</option>
+                                                <option>Abuja</option>
+                                                <option>Addis Abeba</option>
+                                                <option>Alger</option>
+                                                <option>Almeria</option>
+                                                <option>Amman</option>
+                                                <option>Ankara</option>
+                                                <option>Ashgabat</option>
+                                                <option>Nur-Sultan</option>
+                                                <option>Atena</option>
+                                                <option>Bagdad</option>
+                                                <option>Baku</option>
+                                                <option>Bălţi</option>
+                                                <option>Bangkok</option>
+                                                <option>Barcelona</option>
+                                                <option>Beijing</option>
+                                                <option>Beirut</option>
+                                                <option>Belgrad</option>
+                                                <option>Berlin</option>
+                                                <option>Berna</option>
+                                                <option>Bilbao</option>
+                                                <option>Bogota</option>
+                                                <option>Bologna</option>
+                                                <option>Bonn</option>
+                                                <option>Brasilia</option>
+                                                <option>Bratislava</option>
+                                                <option>Bruxelles</option>
+                                                <option>Budapesta</option>
+                                                <option>Buenos Aires</option>
+                                                <option>Cahul</option>
+                                                <option>Cairo</option>
+                                                <option>Canberra</option>
+                                                <option>Cape Town</option>
+                                                <option>Caracas</option>
+                                                <option>Castellón de la Plana</option>
+                                                <option>Catania</option>
+                                                <option>Cernăuţi</option>
+                                                <option>Chicago</option>
+                                                <option>Chişinău</option>
+                                                <option>Ciudad de Mexico</option>
+                                                <option>Ciudad Real</option>
+                                                <option>Colombo</option>
+                                                <option>Copenhaga</option>
+                                                <option>Dakar</option>
+                                                <option>Damasc</option>
+                                                <option>Doha</option>
+                                                <option>Dubai</option>
+                                                <option>Dublin</option>
+                                                <option>Edinburgh</option>
+                                                <option>Erbil</option>
+                                                <option>Erevan</option>
+                                                <option>Gyula</option>
+                                                <option>Haga</option>
+                                                <option>Hanoi</option>
+                                                <option>Harare</option>
+                                                <option>Havana</option>
+                                                <option>Helsinki</option>
+                                                <option>Hong Kong</option>
+                                                <option>Islamabad</option>
+                                                <option>Istanbul</option>
+                                                <option>Izmir</option>
+                                                <option>Jakarta</option>
+
+                                                <option>Kabul</option>
+                                                <option>Khartoum</option>
+                                                <option>Kiev</option>
+                                                <option>Kuala Lumpur</option>
+                                                <option>Kuweit</option>
+                                                <option>Lima</option>
+                                                <option>Lisabona</option>
+                                                <option>Ljubljana</option>
+                                                <option>Londra</option>
+                                                <option>Los Angeles</option>
+                                                <option>Luanda</option>
+                                                <option>Luxemburg</option>
+
+
+                                                <option>Lyon</option>
+                                                <option>Madrid</option>
+                                                <option>Manila</option>
+                                                <option>Marsilia</option>
+                                                <option>Milano</option>
+                                                <option>Minsk</option>
+                                                <option>Montevideo</option>
+                                                <option>Montreal</option>
+                                                <option>Moscova</option>
+                                                <option>München</option>
+                                                <option>Nairobi</option>
+                                                <option>New Delhi</option>
+
+                                                <option>New York</option>
+                                                <option>Nicosia</option>
+                                                <option>Odesa</option>
+                                                <option>Oslo</option>
+                                                <option>Ottawa</option>
+                                                <option>Paris</option>
+                                                <option>Podgoriţa</option>
+                                                <option>Praga</option>
+                                                <option>Pretoria</option>
+                                                <option>Rabat</option>
+                                                <option>Rio de Janeiro</option>
+                                                <option>Riad</option>
+
+                                                <option>Roma</option>
+                                                <option>Rostov pe Don</option>
+                                                <option>Salonic</option>
+                                                <option>Sankt Petersburg</option>
+                                                <option>Santiago de Chile</option>
+                                                <option>Sarajevo</option>
+                                                <option>Seul</option>
+                                                <option>Sevilla</option>
+                                                <option>Shanghai</option>
+                                                <option>Singapore</option>
+                                                <option>Skopje</option>
+                                                <option>Sofia</option>
+
+                                                <option>Stockholm</option>
+                                                <option>Strasbourg</option>
+                                                <option>Sydney</option>
+                                                <option>Szeged</option>
+                                                <option>Taskent</option>
+                                                <option>Tbilisi</option>
+                                                <option>Teheran</option>
+                                                <option>Tel Aviv</option>
+                                                <option>Tirana</option>
+                                                <option>Tokyo</option>
+                                                <option>Torino</option>
+                                                <option>Toronto</option>
+                                                <option>Trieste</option>
+                                                <option>Tripoli</option>
+                                                <option>Tunis</option>
+                                                <option>Vancouver</option>
+                                                <option>Varșovia</option>
+                                                <option>Vârșeț</option>
+                                                <option>Viena</option>
+                                                <option>Vilnius</option>
+                                                <option>Washington</option>
+                                                <option>Zagreb</option>
+                                                <option>Zaječar</option>
+                                                <option>Zaragoza</option>
+                                                <option>Solotvino</option>
+                                                <option>Bari</option>
+                                                <option>Tallinn</option>
+                                                <option>Miami</option>
+                                                <option>Melbourne</option>
+                                                <option>Manchester</option>
+                                                <option>Muscat</option>
+                                                <option>Haifa</option>
+                                                <option>Stuttgart</option>
+                                            </datalist>
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->
+
+                                <div class="input_wrapper_col">
+                                    <div class="row">
+                                        <input class="input_wraper__data hasDatepicker" name="serviceConsul" id="serviceConsul" type="text"
+                                            placeholder="Serviciul consular" list="serviceC-li">
+                                            <datalist id="serviceC-li">
+                                                <option>Redobândirea cetățeniei R. Moldova</option>
+                                                <option>Modificarea opțiunii de domiciliu</option>
+                                                <option>Acordarea cetățeniei R.Moldova</option>
+                                                <option>Depunerea jurământului de credință la Consulat</option>
+                                                <option>Eliberarea duplicatului certificatului de cetățenie R.Molova</option>
+                                                <option>Dobândirea cetățeniei R.Molova pentru minori</option>
+                                                <option>Renunțare la cetățenia R. Molova</option>
+                                                <option>Altele</option>
+                                            </datalist>
+   
+                                    </div> <!-- row close -->
+                                </div> <!-- input_wrapper_col col33 close -->
+                                
+                            </div> <!-- input_wrapper close -->
+                        </div> <!-- input_col close -->
+                    </div> <!-- input_row close -->
+
+
+
                     <div class="input_row">
                         <div class="input_col input_col--big">
                             <div class="input_col__title">Date de identitate ale solicitantului</div>
