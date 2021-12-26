@@ -5,13 +5,11 @@ $("#submitReg").click(function(e){
     $('.alert-info').removeClass('alert-info--error');
     $('.alert-info').removeClass('alert-info--succes');
     
-
     let reg_email = $("#reg_email").val();
     let reg_fname = $("#reg_fname").val();
     let reg_lname = $("#reg_lname").val();
     let reg_psw = $("#reg_psw").val();
     let reg_pswCheck = $("#reg_pswCheck").val();
-
 
     $.ajax({
         type: 'POST',
@@ -36,7 +34,6 @@ $("#submitReg").click(function(e){
         }
     })
 });
-
 
 // send data login with ajax
 $("#submitLogin").click(function(e){
@@ -254,7 +251,11 @@ $("#submitData").click(function(e){
             if(response.statusCode == 200){
                 $('.alert-info').html('SUCCES');
                 $('.alert-info').addClass('alert-info--succes');
-                location.replace("http://localhost/TEZA%20DE%20AN%20BD/php/dosar.php");
+                window.scrollTo({top: 0, behavior: 'smooth'});
+                let delayInMilliseconds = 2500;
+                setTimeout(function() {
+                    location.replace("http://localhost/TEZA%20DE%20AN%20BD/php/dosar.php");
+                }, delayInMilliseconds);
             } else if(response.statusCode == 201){
                 $('.alert-info').html('Erroare: Ceva a fost introdusa incorect.');
                 $('.alert-info').addClass('alert-info--error');
@@ -265,5 +266,79 @@ $("#submitData").click(function(e){
                 $("html, body").animate({ scrollTop: 0 }, "slow");
             }
         }
-    })
+    });
 });
+
+
+// send data for view
+let detailsBtn = $('.btn_request');
+let codeRequest =  $('.code_request');
+
+
+for(let i = 0; i < detailsBtn.length; i++) {
+    detailsBtn[i].addEventListener('click', (e) => {
+        let requestDetails = codeRequest[i].innerHTML;
+
+        e.preventDefault();
+        $('.alert-info').html('');
+        $('.alert-info').removeClass('alert-info--error');
+        $('.alert-info').removeClass('alert-info--succes');
+
+        $.ajax({
+            type: 'POST',
+            url: '../php/viewServer.php',
+            data:{
+                requestDetails: requestDetails
+            },
+            dataType: "json",
+            success: function(response){
+                if(response.statusCode == 200){
+                    location.replace("http://localhost/TEZA%20DE%20AN%20BD/php/viewCerere.php");
+                }
+            }
+        })
+
+    })
+}
+
+
+
+// // send data for delete
+// let deleteBtn = $('.btn_delete');
+// let codeRequest =  $('.code_request');
+
+// for(let i = 0; i < deleteBtn.length; i++) {
+//     deleteBtn[i].addEventListener('click', (e) => {
+//         let requestDelete = codeRequest[i].innerHTML;
+
+//         e.preventDefault();
+//         $('.alert-info').html('');
+//         $('.alert-info').removeClass('alert-info--error');
+//         $('.alert-info').removeClass('alert-info--succes');
+
+//         $.ajax({
+//             type: 'POST',
+//             url: '../php/delete.php',
+//             data:{
+//                 requestDelete: requestDelete
+//             },
+//             dataType: "json",
+//             success: function(response){
+//                 if(response.statusCode == 200){
+//                     $('.alert-info').html('SUCCES DELETE');
+//                     $('.alert-info').addClass('alert-info--succes');
+//                     window.scrollTo({top: 0, behavior: 'smooth'});
+//                     let delayInMilliseconds = 4000;
+//                     setTimeout(function() {
+//                         location.reload();
+//                     }, delayInMilliseconds);
+                    
+//                 } else if(response.statusCode == 204){
+//                     $('.alert-info').html('Error: Faceti un refresh la pahina');
+//                     $('.alert-info').addClass('alert-info--error');
+//                 }
+//             }
+//         })
+
+//     })
+// }

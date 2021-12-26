@@ -37,13 +37,14 @@ $(document).ready(function () {
     ModalActivity(); // -> Run
 
     
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
+    // $(document).on('click', 'a[href^="#"]', function (event) {
+    //     event.preventDefault();
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 1500);
-    });
+    //     $('html, body').animate({
+    //         scrollTop: $( $.attr(this, 'href') ).offset().top
+    //     }, 1500);
+    // });
+
 
 
     $("#birthday").datepicker({ dateFormat: 'yy-mm-dd' });

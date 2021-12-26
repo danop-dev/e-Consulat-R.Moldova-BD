@@ -100,6 +100,7 @@ if(isset($_SESSION["email"])) {
                 <div class="box_wrapper-title"> Cererile mele <br>
                     <hr>
                 </div>
+                <div class="alert-info"></div>
                 <div class="box__scroll">
 
                 <?php 
@@ -110,6 +111,7 @@ if(isset($_SESSION["email"])) {
                     $queryRequest = "SELECT * FROM cereri JOIN users ON cereri.id_user = users.id_user AND users.email='$email'";  
                     $result = mysqli_query($conbd, $queryRequest);
 
+
                     
                     while($row = mysqli_fetch_array($result)) {
                         echo '<div class="doc__item">
@@ -117,7 +119,7 @@ if(isset($_SESSION["email"])) {
                                     <div class="doc__left">
                                         <ul class="doc__list">
                                             <li class="doc__list-item">
-                                                <b>Cod cerere:</b> '.$row["cod_cerere"].'
+                                                <b>Cod cerere:</b> <span class="code_request">'.$row["cod_cerere"].'</span> 
                                             </li>
                                             <li class="doc__list-item">
                                                 <b>Serviciu consular solicitat:</b> '.$row["servicii_consulat"].'
@@ -140,10 +142,13 @@ if(isset($_SESSION["email"])) {
                                 </div> <!-- doc__box close -->
                                 <div class="info-btn-row">
                                     <a href="#" class="panel__btn btn_request"><i class="fas fa-file-alt">Detalii cerere</i></a>
+                                    <a href="#" class="panel__btn btn_delete"><i class="fas fa-trash-alt">Sterge cerere</i></a>
                                 </div>
                             </div> <!-- doc__item close --> ';
                     
                     }
+
+                    
 
                     
                     mysqli_close($conbd);
@@ -280,6 +285,7 @@ if(isset($_SESSION["email"])) {
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/data.js"></script>
 </body>
 
 </html>

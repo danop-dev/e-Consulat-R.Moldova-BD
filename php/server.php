@@ -91,7 +91,7 @@ $tax = $_POST['tax'];
 
 if(!empty($fname)){
 
-    // $isNotError = true;
+    $isNotError = true;
     // if(!(validName($fname) && validName($lname))){
     //     $isNotError = false;
     // }
@@ -214,7 +214,7 @@ if(!empty($fname)){
         (SELECT id_taxa FROM taxa WHERE modalitate = '$payMod' AND valuta = '$currency' AND taxa = '$tax') ) ";    
         mysqli_query($conbd, $insert_sql);
 
-        
+
         mysqli_close($conbd);
         echo json_encode(array('statusCode' => 200));         
     } else{

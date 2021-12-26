@@ -20,6 +20,7 @@ if(!empty($_POST["login_email"]) && !empty($_POST["login_psw"])){
 
     if($isNotError){
         $conbd = connect();
+        $password = md5($password);
         $checkEmail = "SELECT email, psw FROM users WHERE email='$email' AND psw='$password'";  
         $result = mysqli_query($conbd, $checkEmail);
         

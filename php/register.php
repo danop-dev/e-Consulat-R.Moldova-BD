@@ -28,7 +28,7 @@ if(!empty($_POST["reg_email"]) && !empty($_POST["reg_fname"]) && !empty($_POST["
         $resultcheckEmail = $conbd -> query($checkEmail);
         
         if ($resultcheckEmail -> num_rows == 0){
-            //$password = md5($password);
+            $password = md5($password);
             $insert_sql = "INSERT INTO users(email, fname, lname, psw) VALUES('$email', '$fname', '$lname', '$password')";
             mysqli_query($conbd, $insert_sql);
             echo json_encode(array('statusCode' => 200));

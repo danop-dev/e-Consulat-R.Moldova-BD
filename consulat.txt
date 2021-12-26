@@ -45,7 +45,7 @@ CREATE TABLE adresa_resedinta (
 
 CREATE TABLE doc_identitate (
 	id_doc_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    IDNP int(20),
+    IDNP int(20) NOT NULL,
     doc_md BOOLEAN,
     seria varchar(2),
     nr_serie int(10),
@@ -303,7 +303,7 @@ CREATE TABLE adresa_resedinta (
 
 CREATE TABLE doc_identitate (
 	id_doc_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    IDNP int(20),
+    IDNP int(20) NOT NULL,
     doc_md BOOLEAN,
     seria varchar(2),
     nr_serie int(10),
@@ -466,7 +466,7 @@ CREATE TABLE adresa_resedinta (
 
 CREATE TABLE doc_identitate (
 	id_doc_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    IDNP int(20),
+    IDNP int(20) NOT NULL,
     doc_md BOOLEAN,
     seria varchar(2),
     nr_serie int(10),

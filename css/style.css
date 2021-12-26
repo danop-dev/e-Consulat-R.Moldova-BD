@@ -1155,12 +1155,15 @@ span input:hover{
 .info-btn-row {
     background-color: #f5f5f5;
     padding: 15px;
+
+    display: flex;
 }
 
 .info-btn-row a{
     width: 160px;
     margin-top: 0;
     font-size: 0.85rem;
+    margin-right: 10px;
 }
 
 .info-btn-row i::before{
@@ -1170,9 +1173,17 @@ span input:hover{
     margin-right: 10px;
 }
 
+
+.btn_delete{
+    background-color: #c70000;
+    transition: all .2s linear;
+}
+
+.btn_delete:hover{
+    border: 1px solid #c70000;
+    color: #c70000;
+}
 /* ### DOSAR PAGE PHP close ### */
-
-
 
 .alert-info--error{
     padding: 20px 50px;
@@ -1199,8 +1210,6 @@ span input:hover{
 }
 
 /* ### INPUT DATA PAHE PHP  ### */
-
-
 
 .input_row {
     display: flex;
@@ -1299,8 +1308,6 @@ span input:hover{
     color: rgba(0, 0, 0, 1);
     font-size: 0.9rem;
 }
-
-
 
 
 /* ### INPUT DATA PAHE PHP  ### */
