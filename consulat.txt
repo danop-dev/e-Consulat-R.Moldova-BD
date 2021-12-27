@@ -303,7 +303,7 @@ CREATE TABLE adresa_resedinta (
 
 CREATE TABLE doc_identitate (
 	id_doc_identitate int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    IDNP int(20) NOT NULL,
+    IDNP int(30) NOT NULL,
     doc_md BOOLEAN,
     seria varchar(2),
     nr_serie int(10),
@@ -352,10 +352,10 @@ CREATE TABLE copii_minori (
 
 CREATE TABLE users(
 	id_user int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    email varchar(30),
-    fname varchar(20),
-    lname varchar(20),
-    psw varchar(256) 
+    email varchar(30) NOT NULL,
+    fname varchar(20) NOT NULL,
+    lname varchar(20) NOT NULL,
+    psw varchar(256) NOT NULL
 );
 
 CREATE TABLE taxa(
@@ -387,8 +387,8 @@ CREATE TABLE cereri (
     FOREIGN KEY (id_resedinta) REFERENCES adresa_resedinta(id_resedinta) ON DELETE CASCADE,
     FOREIGN KEY (id_parinti) REFERENCES parinti(id_parinti) ON DELETE CASCADE,
     FOREIGN KEY (id_copii) REFERENCES copii_minori(id_copii) ON DELETE CASCADE,
-    FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE,
-    FOREIGN KEY (id_taxa) REFERENCES taxa(id_taxa) ON DELETE CASCADE
+    FOREIGN KEY (id_user) REFERENCES users(id_user) ,
+    FOREIGN KEY (id_taxa) REFERENCES taxa(id_taxa)
 );
 
 

@@ -196,7 +196,7 @@ if(!empty($fname)){
         $emailUser =  $_SESSION["email"];
 
         $insert_sql = " INSERT INTO `cereri`(`cod_cerere`, `servicii_consulat`, `oficiul_consulat`, `data_programarii`, `data_cerere`, `id_identitate`, `id_nastere`, `id_domiciliu`, `id_resedinta`, `id_parinti`, `id_copii`, `id_user`, `id_taxa`) VALUES ('$codCerere', '$serviceConsul', '$officeConsul', DATE_ADD(CURRENT_DATE(), INTERVAL 20 DAY), CURRENT_DATE(), 
-        (SELECT date_identitate.id_identitate FROM date_identitate JOIN doc_identitate on doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate AND doc_identitate.IDNP = '$idnp' limit 1), 
+        (SELECT date_identitate.id_identitate FROM date_identitate JOIN doc_identitate ON doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate AND doc_identitate.IDNP = '$idnp' limit 1), 
         
         (SELECT id_nastere FROM adresa_nastere WHERE tara = '$countryBirth' AND regiunea = '$region' AND localitatea = '$locality' limit 1), 
         

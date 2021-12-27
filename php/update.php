@@ -3,7 +3,6 @@ include 'validation.php';
 include 'conectbd.php';
 
 session_start();
-// $id_cod_cerere = $_POST['id_cod_cerere'];
 
 $officeConsul = $_POST['officeConsul'];
 $serviceConsul = $_POST['serviceConsul'];
@@ -117,7 +116,6 @@ $tax = $_POST['tax'];
             $_SESSION["oficiul_consulat"]   = $row['oficiul_consulat'];
         }
 
-
         //update cereri
         mysqli_query($conbd, " UPDATE cereri SET servicii_consulat = '$serviceConsul', oficiul_consulat = '$officeConsul' WHERE cod_cerere = '$id_cod_cerere' ");
 
@@ -142,7 +140,6 @@ $tax = $_POST['tax'];
         WHERE adresa_nastere.id_nastere = copii_minori.id_nastere_minor AND copii_minori.id_copii = (SELECT id_copii FROM cereri WHERE cod_cerere = '$id_cod_cerere') AND date_identitate.id_identitate = copii_minori.id_identitate_copil AND doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate ";
         mysqli_query($conbd, $updateQuery);
 
-
         //update taxa
         $updateQuery = " UPDATE taxa SET modalitate = '$payMod', valuta = '$currency' WHERE id_taxa = (SELECT id_taxa FROM cereri WHERE cod_cerere = '$id_cod_cerere') ";
         mysqli_query($conbd, $updateQuery);
@@ -153,7 +150,6 @@ $tax = $_POST['tax'];
 
         $updateQuery = " UPDATE parinti, date_identitate, doc_identitate SET date_identitate.nume = '$fnameDad', date_identitate.prenume = '$lnameDad', doc_identitate.IDNP = '$idnpDad' WHERE doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate AND parinti.id_identitate_tata = date_identitate.id_identitate AND id_parinti = (SELECT id_parinti FROM cereri WHERE cod_cerere = '$id_cod_cerere') ";
         mysqli_query($conbd, $updateQuery);
-
 
         //update personal data
         $updateQuery = " UPDATE date_identitate, doc_identitate 

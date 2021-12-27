@@ -504,42 +504,43 @@ $("#saveUpdate").click(function(e){
 });
 
 
-// // send data for delete
-// let deleteBtn = $('.btn_delete');
-// let codeRequest =  $('.code_request');
+// send data for delete
+let deleteBtn = $('.btn_delete');
+let codeReq =  $('.code_request');
 
-// for(let i = 0; i < deleteBtn.length; i++) {
-//     deleteBtn[i].addEventListener('click', (e) => {
-//         let requestDelete = codeRequest[i].innerHTML;
+for(let i = 0; i < deleteBtn.length; i++) {
+    deleteBtn[i].addEventListener('click', (e) => {
+        let requestDelete = codeReq[i].innerHTML;
 
-//         e.preventDefault();
-//         $('.alert-info').html('');
-//         $('.alert-info').removeClass('alert-info--error');
-//         $('.alert-info').removeClass('alert-info--succes');
+        e.preventDefault();
+        $('.alert-info').html('');
+        $('.alert-info').removeClass('alert-info--error');
+        $('.alert-info').removeClass('alert-info--succes');
 
-//         $.ajax({
-//             type: 'POST',
-//             url: '../php/delete.php',
-//             data:{
-//                 requestDelete: requestDelete
-//             },
-//             dataType: "json",
-//             success: function(response){
-//                 if(response.statusCode == 200){
-//                     $('.alert-info').html('SUCCES DELETE');
-//                     $('.alert-info').addClass('alert-info--succes');
-//                     window.scrollTo({top: 0, behavior: 'smooth'});
-//                     let delayInMilliseconds = 4000;
-//                     setTimeout(function() {
-//                         location.reload();
-//                     }, delayInMilliseconds);
+        $.ajax({
+            type: 'POST',
+            url: '../php/delete.php',
+            data:{
+                requestDelete: requestDelete
+            },
+            dataType: "json",
+            success: function(response){
+                if(response.statusCode == 200){
+                    $('.alert-info').html('SUCCES DELETE');
+                    $('.alert-info').addClass('alert-info--succes');
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                    let delayInMilliseconds = 2000;
+                    setTimeout(function() {
+                        location.reload();
+                    }, delayInMilliseconds);
                     
-//                 } else if(response.statusCode == 204){
-//                     $('.alert-info').html('Error: Faceti un refresh la pahina');
-//                     $('.alert-info').addClass('alert-info--error');
-//                 }
-//             }
-//         })
+                } else if(response.statusCode == 201){
+                    $('.alert-info').html('Error: Faceti un refresh la pahina');
+                    $('.alert-info').addClass('alert-info--error');
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                }
+            }
+        })
 
-//     })
-// }
+    })
+}
