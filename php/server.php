@@ -83,21 +83,15 @@ $payMod = $_POST['payMod'];
 $currency = $_POST['currency'];
 $tax = $_POST['tax'];
 
-
-
-
-// if(!empty($fname) && !empty($fnameBirth) && !empty($fnameDad) && !empty($cetatenie) && !empty($sex) && !empty($lname) && !empty($lnameBirth) && !empty($lnameDad) && !empty($idnp) && !empty($birthday) && !empty($countryBirth) && !empty($region) && !empty($locality) && !empty($docSerie) && !empty($numDoc) && !empty($typeDoc) && !empty($emitDate) && !empty($emisDe) && !empty($countryHome) && !empty($strHome) && !empty($numHome) && !empty($regionHome) && !empty($localityForeignHome) && !empty($countryForeign) && !empty($strForeign) && !empty($numForeign) && !empty($regionForeign) && !empty($localityForeign2) && !empty($telData) && !empty($emailData)){
-
-
-if(!empty($fname)){
+if(!empty($fname) && !empty($lname) && !empty($idnp) && !empty($docSerie) && !empty($numDoc) && !empty($telData) && !empty($emailData)){
 
     $isNotError = true;
-    // if(!(validName($fname) && validName($lname))){
-    //     $isNotError = false;
-    // }
-    // if(!validEmail($emailData)){
-    //     $isNotError = false;
-    // }
+    if(!(validName($fname) && validName($lname))){
+        $isNotError = false;
+    }
+    if(!validEmail($emailData)){
+        $isNotError = false;
+    }
 
     if($isNotError){
         $conbd = connect();
@@ -109,7 +103,6 @@ if(!empty($fname)){
         //add data in adresa_domiciliu
         $insert_sql = " INSERT INTO adresa_domiciliu (tara, regiunea, localitatea, strada, numar, bloc, etaj, scara, apartament, cod_postal) VALUES ('$countryHome', '$regionHome', '$localityForeignHome', '$strHome', '$numHome', '$blocHome', '$etajHome', '$scarHome', '$apartmentHome', '$zipCodeHome') ";
         mysqli_query($conbd, $insert_sql);
-
 
         //add data in adresa_nastere
         $insert_sql = " INSERT INTO adresa_nastere (tara, regiunea, localitatea) VALUES ('$countryBirth', '$region', '$locality') ";
@@ -136,7 +129,6 @@ if(!empty($fname)){
         //add data in parinti
         //add parinte
 
-
         $checkIDNP = " SELECT IDNP FROM doc_identitate WHERE IDNP = '$idnpMom' ";
         $resultIDNP = $conbd -> query($checkIDNP);
 
@@ -153,7 +145,6 @@ if(!empty($fname)){
             mysqli_query($conbd, $insert_sql);
         }
         
-
         $insert_sql = " INSERT INTO date_identitate (nume, prenume, sex, id_doc_identitate) VALUES ('$fnameMom', '$lnameMom', 'Feminin', (SELECT id_doc_identitate FROM doc_identitate WHERE doc_identitate.IDNP = '$idnpMom' limit 1)) ";
         mysqli_query($conbd, $insert_sql);
 
@@ -181,7 +172,6 @@ if(!empty($fname)){
         $insert_sql = " INSERT INTO copii_minori (nume, prenume, id_identitate_copil, id_nastere_minor) VALUES ('$fnameCopil', '$lnameCopil', (SELECT date_identitate.id_identitate FROM date_identitate JOIN doc_identitate on doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate AND doc_identitate.IDNP = '$idnpCopil' limit 1), (SELECT MAX(id_nastere) FROM adresa_nastere WHERE adresa_nastere.tara = '$countryBirthCopil' AND adresa_nastere.regiunea = '$regionCopil' AND adresa_nastere.localitatea = '$localityCopil')) ";
         mysqli_query($conbd, $insert_sql);
                           
-        
         // add date cereri
         $flag = false;
         while (!$flag) {
@@ -214,11 +204,10 @@ if(!empty($fname)){
         (SELECT id_taxa FROM taxa WHERE modalitate = '$payMod' AND valuta = '$currency' AND taxa = '$tax') ) ";    
         mysqli_query($conbd, $insert_sql);
 
-
         mysqli_close($conbd);
         echo json_encode(array('statusCode' => 200));         
     } else{
-        echo json_encode(array('statusCode' => 202));
+        echo json_encode(array('statusCode' => 201));
     }
 } else {
     echo json_encode(array('statusCode' => 204));

@@ -1,7 +1,6 @@
 <?php
 
-function connect()
-{
+function connect() {
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -9,5 +8,4 @@ function connect()
   
   return mysqli_connect($servername, $username, $password, $db);
 }
-
 ?>

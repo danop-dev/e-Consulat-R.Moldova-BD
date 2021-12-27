@@ -83,8 +83,7 @@ $payMod = $_POST['payMod'];
 $currency = $_POST['currency'];
 $tax = $_POST['tax'];
 
-// if(!empty($fname) && !empty($fnameBirth) && !empty($fnameDad) && !empty($cetatenie) && !empty($sex) && !empty($lname) && !empty($lnameBirth) && !empty($lnameDad) && !empty($idnp) && !empty($birthday) && !empty($countryBirth) && !empty($region) && !empty($locality) && !empty($docSerie) && !empty($numDoc) && !empty($typeDoc) && !empty($emitDate) && !empty($emisDe) && !empty($countryHome) && !empty($strHome) && !empty($numHome) && !empty($regionHome) && !empty($localityForeignHome) && !empty($countryForeign) && !empty($strForeign) && !empty($numForeign) && !empty($regionForeign) && !empty($localityForeign2) && !empty($telData) && !empty($emailData) ){
-    if(!empty($fname)){ 
+if(!empty($fname) && !empty($fnameBirth) && !empty($fnameDad) && !empty($cetatenie) && !empty($sex) && !empty($lname) && !empty($lnameBirth) && !empty($lnameDad) && !empty($idnp) && !empty($birthday) && !empty($countryBirth) && !empty($region) && !empty($locality) && !empty($docSerie) && !empty($numDoc) && !empty($typeDoc) && !empty($emitDate) && !empty($emisDe) && !empty($countryHome) && !empty($strHome) && !empty($numHome) && !empty($regionHome) && !empty($localityForeignHome) && !empty($countryForeign) && !empty($strForeign) && !empty($numForeign) && !empty($regionForeign) && !empty($localityForeign2) && !empty($telData) && !empty($emailData) ){
 
     $id_cod_cerere = str_replace(' ', '', $_POST['id_cod_cerere']);
 
@@ -159,12 +158,8 @@ $tax = $_POST['tax'];
         mysqli_query($conbd, $updateQuery);
 
         mysqli_close($conbd);
-
-        echo json_encode(array('statusCode' => 200));         
-    } else{
-        echo json_encode(array('statusCode' => 201));
-    }
-} else {
-    echo json_encode(array('statusCode' => 204));
-}
+        echo json_encode(array('statusCode' => 200));  
+               
+    } else{ echo json_encode(array('statusCode' => 201)); }
+} else { echo json_encode(array('statusCode' => 204)); }
 ?>

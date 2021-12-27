@@ -4,7 +4,6 @@ include 'conectbd.php';
 session_start();
 
 if(isset($_POST['requestDetails'])){
-
     $requestDetails = $_POST['requestDetails'];
     $_SESSION["codCERERE"] = $requestDetails;
 
@@ -13,7 +12,7 @@ if(isset($_POST['requestDetails'])){
     $resultID = mysqli_query($conbd, $id);
                 
     while($row = mysqli_fetch_array($resultID)) {
-    
+
         $id_identitate  = $row['id_identitate'];
         $id_nastere     = $row['id_nastere'];
         $id_domiciliu   = $row['id_domiciliu'];
@@ -48,7 +47,6 @@ if(isset($_POST['requestDetails'])){
     //personal home address
     $id = " SELECT * FROM adresa_domiciliu WHERE id_domiciliu = '$id_domiciliu' ";
     $resultID = mysqli_query($conbd, $id);
-
     while($row = mysqli_fetch_array($resultID)) {
         $_SESSION["id_adresa_domiciliuTara"]         = $row['tara'];
         $_SESSION["id_adresa_domiciliuRegiunea"]     = $row['regiunea'];
@@ -65,7 +63,6 @@ if(isset($_POST['requestDetails'])){
     //personal foreign address
     $id = " SELECT * FROM adresa_resedinta WHERE id_resedinta = '$id_resedinta' ";
     $resultID = mysqli_query($conbd, $id);
-
     while($row = mysqli_fetch_array($resultID)) {
         $_SESSION["id_adresa_ForeignTara"]         = $row['tara'];
         $_SESSION["id_adresa_ForeignRegiunea"]     = $row['regiunea'];
@@ -83,7 +80,6 @@ if(isset($_POST['requestDetails'])){
     //personal identitate
     $id = " SELECT * FROM date_identitate, doc_identitate WHERE date_identitate.id_identitate = '$id_identitate' AND doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate ";
     $resultID = mysqli_query($conbd, $id);
-
     while($row = mysqli_fetch_array($resultID)) {
         
         $_SESSION["fName"]         = $row['nume'];
@@ -110,29 +106,24 @@ if(isset($_POST['requestDetails'])){
     //mom
     $id = " SELECT * FROM date_identitate, doc_identitate WHERE date_identitate.id_identitate = (SELECT id_identitate_mama FROM parinti WHERE id_parinti = '$id_parinti') AND doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate ";
     $resultID = mysqli_query($conbd, $id);
-
     while($row = mysqli_fetch_array($resultID)) {
         $_SESSION["fnameMom"]      = $row['nume'];
         $_SESSION["lnameMom"]      = $row['prenume'];
         $_SESSION["idnpMom"]       = $row['IDNP'];
-        
     }
 
     //dad
     $id = " SELECT * FROM date_identitate, doc_identitate WHERE date_identitate.id_identitate = (SELECT id_identitate_tata FROM parinti WHERE id_parinti = '$id_parinti') AND doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate ";
     $resultID = mysqli_query($conbd, $id);
-
     while($row = mysqli_fetch_array($resultID)) {
         $_SESSION["fnameDad"]      = $row['nume'];
         $_SESSION["lnameDad"]      = $row['prenume'];
         $_SESSION["idnpDad"]       = $row['IDNP'];
     }
 
-
     //date copil
     $id = " SELECT * FROM date_identitate, doc_identitate WHERE date_identitate.id_identitate = (SELECT id_identitate_copil FROM copii_minori WHERE id_copii = '$id_copii') AND doc_identitate.id_doc_identitate = date_identitate.id_doc_identitate ";
     $resultID = mysqli_query($conbd, $id);
-
     while($row = mysqli_fetch_array($resultID)) {
         $_SESSION["fnameCopil"]         = $row['nume'];
         $_SESSION["lnameCopil"]         = $row['prenume'];
@@ -142,24 +133,15 @@ if(isset($_POST['requestDetails'])){
         $_SESSION["idnpCopil"]          = $row['IDNP'];
     }
 
-
     //taxa
     $id = " SELECT * FROM taxa WHERE id_taxa = '$id_taxa' ";
     $resultID = mysqli_query($conbd, $id);
-
     while($row = mysqli_fetch_array($resultID)) {
         $_SESSION["modalitate"]  = $row['modalitate'];
         $_SESSION["currency"]      = $row['valuta'];
         $_SESSION["taxa"]        = $row['taxa'];
     }
-
-
-
     mysqli_close($conbd);
-
     echo json_encode(array('statusCode' => 200));
-    
 }
-
-
 ?>

@@ -6,9 +6,7 @@ session_start();
 $email = $_POST['login_email'];
 $password = $_POST['login_psw'];
 
-
 if(!empty($_POST["login_email"]) && !empty($_POST["login_psw"])){
-    
     
     $isNotError = true;
     if(!validEmail($email)){
@@ -37,5 +35,4 @@ if(!empty($_POST["login_email"]) && !empty($_POST["login_psw"])){
 } else {
     echo json_encode(array('statusCode' => 204));
 }
-
 ?>

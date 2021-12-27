@@ -1,13 +1,10 @@
 <?php
-
 include 'conectbd.php';
 
 session_start();
-
 if(isset($_SESSION["email"])) {
     $email = $_SESSION["email"];
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +82,7 @@ if(isset($_SESSION["email"])) {
     <section class="section" id="banner">
         <div class="container">
             <div id="head-logo">
-                <a class="head-logo__link" href="index.html">
+                <a class="head-logo__link" href="dosar.php">
                     <img class="main-logo" src="../img/MAE Moldova.png"
                         alt="Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova">
                     <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile mele</div>
@@ -104,15 +101,11 @@ if(isset($_SESSION["email"])) {
                 <div class="box__scroll">
 
                 <?php 
-
                     $conbd = connect();
-                    
                     
                     $queryRequest = "SELECT * FROM cereri JOIN users ON cereri.id_user = users.id_user AND users.email='$email'";  
                     $result = mysqli_query($conbd, $queryRequest);
-
-
-                    
+      
                     while($row = mysqli_fetch_array($result)) {
                         echo '<div class="doc__item">
                                 <div class="doc__box">
@@ -144,18 +137,10 @@ if(isset($_SESSION["email"])) {
                                     <a href="#" class="panel__btn btn_request"><i class="fas fa-file-alt">Detalii cerere</i></a>
                                     <a href="#" class="panel__btn btn_delete"><i class="fas fa-trash-alt">Sterge cerere</i></a>
                                 </div>
-                            </div> <!-- doc__item close --> ';
-                    
-                    }
-
-                    
-
-                    
+                            </div> <!-- doc__item close --> ';                
+                    }                 
                     mysqli_close($conbd);
                 ?>
-
-
-                    
 
                 </div> <!-- box__scroll close  --> 
                 <div class="create-btn">
@@ -281,7 +266,6 @@ if(isset($_SESSION["email"])) {
             <div class="flag-color flag--red"></div>
         </div> <!-- flag close -->
     </footer> <!-- footer-flag close -->
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/main.js"></script>

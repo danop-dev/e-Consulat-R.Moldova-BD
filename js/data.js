@@ -57,7 +57,6 @@ $("#submitLogin").click(function(e){
             if(response.statusCode == 200){
                 $('.alert-info').html('SUCCES');
                 $('.alert-info').addClass('alert-info--succes');
-                
                 location.replace("http://localhost/TEZA%20DE%20AN%20BD/php/dosar.php");
             } else if(response.statusCode == 201){
                 $('.alert-info').html('Login sau Parola a fost introdusa incorect');
@@ -75,7 +74,6 @@ $("#submitData").click(function(e){
     $('.alert-info').removeClass('alert-info--succes');
 
     //input value data
-
     //row
     let officeConsul        = $("#officeConsul").val();
     let serviceConsul       = $("#serviceConsul").val();
@@ -269,13 +267,9 @@ $("#submitData").click(function(e){
     });
 });
 
-
 // send data for view
 let detailsBtn = $('.btn_request');
 let codeRequest =  $('.code_request');
-
-
-
 
 for(let i = 0; i < detailsBtn.length; i++) {
     detailsBtn[i].addEventListener('click', (e) => {
@@ -310,7 +304,6 @@ $("#saveUpdate").click(function(e){
     $('.alert-info').removeClass('alert-info--succes');
 
     //input value data
-
     //row
     let officeConsul        = $("#officeConsul").val();
     let serviceConsul       = $("#serviceConsul").val();
@@ -503,7 +496,6 @@ $("#saveUpdate").click(function(e){
     });
 });
 
-
 // send data for delete
 let deleteBtn = $('.btn_delete');
 let codeReq =  $('.code_request');
@@ -529,11 +521,7 @@ for(let i = 0; i < deleteBtn.length; i++) {
                     $('.alert-info').html('SUCCES DELETE');
                     $('.alert-info').addClass('alert-info--succes');
                     window.scrollTo({top: 0, behavior: 'smooth'});
-                    let delayInMilliseconds = 2000;
-                    setTimeout(function() {
-                        location.reload();
-                    }, delayInMilliseconds);
-                    
+                    location.reload("http://localhost/TEZA%20DE%20AN%20BD/php/dosar.php");
                 } else if(response.statusCode == 201){
                     $('.alert-info').html('Error: Faceti un refresh la pahina');
                     $('.alert-info').addClass('alert-info--error');
@@ -541,6 +529,5 @@ for(let i = 0; i < deleteBtn.length; i++) {
                 }
             }
         })
-
     })
 }

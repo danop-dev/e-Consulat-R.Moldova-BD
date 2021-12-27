@@ -1,14 +1,12 @@
 <?php
 include 'conectbd.php';
 
-
 if(isset($_POST['requestDelete'])){
     
     $requestDelete = $_POST['requestDelete'];
     $conbd = connect();
     $id = " SELECT id_identitate, id_nastere, id_domiciliu, id_resedinta, id_parinti, id_copii, id_taxa FROM cereri WHERE cod_cerere = '$requestDelete' ";
-    $resultID = mysqli_query($conbd, $id);
-                
+    $resultID = mysqli_query($conbd, $id);          
     while($row = mysqli_fetch_array($resultID)) {
     
         $idIdentitate = $row['id_identitate'];
@@ -21,7 +19,6 @@ if(isset($_POST['requestDelete'])){
     }
 
     $idChildbirth = mysqli_query($conbd, " SELECT id_nastere FROM adresa_nastere JOIN copii_minori ON copii_minori.id_nastere_minor = adresa_nastere.id_nastere AND copii_minori.id_copii = '$id_copii' ");
-
 
     $deleteQuery = " DELETE FROM doc_identitate WHERE id_doc_identitate = (SELECT id_doc_identitate FROM date_identitate WHERE id_identitate = (SELECT id_identitate FROM cereri WHERE cod_cerere = '$requestDelete')) 
     OR id_doc_identitate = (SELECT id_doc_identitate FROM date_identitate WHERE id_identitate = (SELECT id_identitate_mama FROM parinti WHERE id_parinti = (SELECT id_parinti FROM cereri WHERE cod_cerere = '$requestDelete')))
@@ -46,7 +43,6 @@ if(isset($_POST['requestDelete'])){
     mysqli_query($conbd, $deleteQuery);
     
     mysqli_close($conbd);
-    
-    echo json_encode(array('statusCode' => $id_nastereCopil));
+    echo json_encode(array('statusCode' => 200));
 } else { echo json_encode(array('statusCode' => 201)); }
 ?>

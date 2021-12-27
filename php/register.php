@@ -8,7 +8,6 @@ $email = $_POST['reg_email'];
 $password = $_POST['reg_psw'];
 $passwordCheck = $_POST['reg_pswCheck'];
 
-
 if(!empty($_POST["reg_email"]) && !empty($_POST["reg_fname"]) && !empty($_POST["reg_lname"]) && !empty($_POST["reg_psw"]) && !empty($_POST["reg_pswCheck"])){
     
     $isNotError = true;
@@ -39,5 +38,4 @@ if(!empty($_POST["reg_email"]) && !empty($_POST["reg_fname"]) && !empty($_POST["
         echo json_encode(array('statusCode' => 202));
     }
 }
-
 ?>

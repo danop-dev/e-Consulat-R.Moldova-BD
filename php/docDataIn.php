@@ -4,7 +4,6 @@ session_start();
 if(isset($_SESSION["email"])) {
     $email = $_SESSION["email"];
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -15,17 +14,14 @@ if(isset($_SESSION["email"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Servicii Consulare R.Moldova">
-    <meta name="keywords"
-        content="e-consulat, Servicii, Servicii Consulare, Consulat, Servicii Consulare R. Moldova, Servicii Online">
+    <meta name="keywords" content="e-consulat, Servicii, Servicii Consulare, Consulat, Servicii Consulare R. Moldova, Servicii Online">
     <meta name="author" content="Oprea Danu">
     <link rel="icon" href="../img/tab-icon.ico">
     <title>e-Consulatul R. Moldova</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 
     <link rel="stylesheet" href="../css/all.css">
@@ -86,11 +82,10 @@ if(isset($_SESSION["email"])) {
     <section class="section" id="banner">
         <div class="container">
             <div id="head-logo">
-                <a class="head-logo__link" href="index.html">
+                <a class="head-logo__link" href="dosar.php">
                     <img class="main-logo" src="../img/MAE Moldova.png"
                         alt="Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova">
-                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile
-                        mele</div>
+                    <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile mele</div>
                 </a>
             </div>
         </div> <!-- container close -->
@@ -103,7 +98,7 @@ if(isset($_SESSION["email"])) {
                     <hr>
                 </div>
                 <div class="alert-info"></div>
-                <form action="#" method="POST">
+                <form method="POST">
                     
                 <div class="input_row">
                         <div class="input_col">
@@ -280,16 +275,13 @@ if(isset($_SESSION["email"])) {
                                                 <option>Dobândirea cetățeniei R.Molova pentru minori</option>
                                                 <option>Renunțare la cetățenia R. Molova</option>
                                                 <option>Altele</option>
-                                            </datalist>
-   
+                                            </datalist> 
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->
                                 
                             </div> <!-- input_wrapper close -->
                         </div> <!-- input_col close -->
                     </div> <!-- input_row close -->
-
-
 
                     <div class="input_row">
                         <div class="input_col input_col--big">
@@ -570,7 +562,6 @@ if(isset($_SESSION["email"])) {
                                         placeholder="IDNP R.Moldova">
                                     <input class="input_wraper__data" type="text" name="birthday" id="birthday"
                                         placeholder="Data nașterii">
-
                                 </div>
                             </div> <!-- input_wrapper close -->
                         </div>
@@ -673,7 +664,6 @@ if(isset($_SESSION["email"])) {
                                     <div class="row">
                                         <input class="input_wraper__data hasDatepicker" name="regionHome" id="regionHome" type="text" placeholder="Regiune adm. - teritorială">         
                                     </div> <!-- row close -->
-
                                     <div class="row min33">
                                         <input class="input_wraper__data" type="text" name="blocHome" id="blocHome"
                                             placeholder="Bloc">
@@ -938,7 +928,6 @@ if(isset($_SESSION["email"])) {
             <div class="flag-color flag--red"></div>
         </div> <!-- flag close -->
     </footer> <!-- footer-flag close -->
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>

@@ -4,9 +4,7 @@ session_start();
 if(isset($_SESSION["email"])) {
     $email = $_SESSION["email"];
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="ro">
@@ -28,7 +26,6 @@ if(isset($_SESSION["email"])) {
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -87,7 +84,7 @@ if(isset($_SESSION["email"])) {
     <section class="section" id="banner">
         <div class="container">
             <div id="head-logo">
-                <a class="head-logo__link" href="index.html">
+                <a class="head-logo__link" href="dosar.php">
                     <img class="main-logo" src="../img/MAE Moldova.png"
                         alt="Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova">
                     <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile
@@ -282,15 +279,12 @@ if(isset($_SESSION["email"])) {
                                                 <option>Renunțare la cetățenia R. Molova</option>
                                                 <option>Altele</option>
                                             </datalist>
-   
                                     </div> <!-- row close -->
                                 </div> <!-- input_wrapper_col col33 close -->
                                 
                             </div> <!-- input_wrapper close -->
                         </div> <!-- input_col close -->
                     </div> <!-- input_row close -->
-
-
 
                     <div class="input_row">
                         <div class="input_col input_col--big">
@@ -569,7 +563,6 @@ if(isset($_SESSION["email"])) {
                                         placeholder="IDNP Personal" value='<?php if(isset($_SESSION["IDNP"])) { echo $_SESSION["IDNP"]; } else { echo "NULL"; } ?>' disabled>
                                     <input class="input_wraper__data" type="text" name="birthday" id="birthday"
                                         placeholder="Data nașterii" value='<?php if(isset($_SESSION["birthday"])) { echo $_SESSION["birthday"]; } else { echo "NULL"; } ?>' disabled>
-
                                 </div>
                             </div> <!-- input_wrapper close -->
                         </div>
@@ -935,7 +928,6 @@ if(isset($_SESSION["email"])) {
             <div class="flag-color flag--red"></div>
         </div> <!-- flag close -->
     </footer> <!-- footer-flag close -->
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>

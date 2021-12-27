@@ -6,14 +6,12 @@ if(isset($_SESSION["email"])) {
     $email = $_SESSION["email"];
 }
 
-
-
 $requestView = $_POST['requestView'];
 
 $conbd = connect();
 $id = " SELECT id_identitate, id_nastere, id_domiciliu, id_resedinta, id_parinti, id_copii, id_taxa FROM cereri WHERE cod_cerere = '$requestDelete' ";
 $resultID = mysqli_query($conbd, $id);
-            
+          
 while($row = mysqli_fetch_array($resultID)) {
 
     $idIdentitate = $row['id_identitate'];
@@ -23,16 +21,11 @@ while($row = mysqli_fetch_array($resultID)) {
     $id_parinti = $row['id_parinti'];
     $id_copii = $row['id_copii'];
     $id_taxa = $row['id_taxa'];
-  
 }
-
 
 mysqli_close($conbd);
 
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ro">
 
@@ -49,9 +42,7 @@ mysqli_close($conbd);
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 
     <link rel="stylesheet" href="../css/all.css">
@@ -112,7 +103,7 @@ mysqli_close($conbd);
     <section class="section" id="banner">
         <div class="container">
             <div id="head-logo">
-                <a class="head-logo__link" href="index.html">
+                <a class="head-logo__link" href="dosar.php">
                     <img class="main-logo" src="../img/MAE Moldova.png"
                         alt="Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova">
                     <div>Ministerul Afacerilor Externe şi Integrării Europene al Republicii Moldova <br><br> Cererile
@@ -962,7 +953,6 @@ mysqli_close($conbd);
             <div class="flag-color flag--red"></div>
         </div> <!-- flag close -->
     </footer> <!-- footer-flag close -->
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
