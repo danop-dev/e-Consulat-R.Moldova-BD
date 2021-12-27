@@ -100,12 +100,12 @@ if(isset($_SESSION["email"])) {
     <section class="section" id="doc">
         <div class="container">
             <div class="box_wrapper" style="background-color: #F5F5F5;">
-                <div class="box_wrapper-title"> Cererile mele <br>
+                <div class="box_wrapper-title"> <span id="id_cod_cerere"> <?php if(isset($_SESSION["codCERERE"])) { echo $_SESSION["codCERERE"]; } ?> </span> <br>
                     <hr>
                 </div>
                 <div class="alert-info"></div>
-                <form action="#" method="POST">
-                    
+
+                <form method="POST">
                 <div class="input_row">
                         <div class="input_col">
                             <div class="input_col__title">Arondare misiune diplomatică</div>
@@ -810,7 +810,10 @@ if(isset($_SESSION["email"])) {
                             </div> <!-- input_wrapper-doc close -->
                         </div> <!-- input_col input_col--small close -->
                     </div> <!-- input_row close -->
-                    <input type="submit" id="submitData" class="panel__btn" value="Save" style="font-weight: 900;">
+                    <!-- <input type="submit" id="saveUpdate" class="panel__btn" value="Save Update" style="font-weight: 900;" disabled> -->
+                    <button id="saveUpdate" class="panel__btn" style="font-weight: 900;">Save Update</button>
+                    <button class="panel__btn" id="updateBtn" style="font-weight: 900;">Update</button>
+                    <a href="http://localhost/TEZA%20DE%20AN%20BD/php/dosar.php" class="panel__btn" style="font-weight: 900;" >Back</a>
                 </form>
             </div> <!-- contact__wrapper close -->
         </div> <!-- container close -->

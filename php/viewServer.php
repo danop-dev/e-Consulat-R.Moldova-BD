@@ -6,6 +6,7 @@ session_start();
 if(isset($_POST['requestDetails'])){
 
     $requestDetails = $_POST['requestDetails'];
+    $_SESSION["codCERERE"] = $requestDetails;
 
     $conbd = connect();
     $id = " SELECT * FROM cereri WHERE cod_cerere = '$requestDetails' ";
@@ -27,8 +28,6 @@ if(isset($_POST['requestDetails'])){
 
     //birth address
     $id = " SELECT * FROM adresa_nastere WHERE id_nastere = '$id_nastere' OR id_nastere = (SELECT adresa_nastere.id_nastere FROM adresa_nastere JOIN copii_minori ON adresa_nastere.id_nastere = copii_minori.id_nastere_minor AND copii_minori.id_copii = '$id_copii') ";
-
- 
     $resultID = mysqli_query($conbd, $id);
 
     while($row = mysqli_fetch_array($resultID)) {

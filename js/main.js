@@ -35,7 +35,6 @@ $(document).ready(function () {
         }
     }
     ModalActivity(); // -> Run
-
     
     // $(document).on('click', 'a[href^="#"]', function (event) {
     //     event.preventDefault();
@@ -46,6 +45,14 @@ $(document).ready(function () {
     // });
 
 
+    $('#updateBtn').click(function (e) {
+        e.preventDefault();
+        $('.alert-info').removeClass('alert-info--error');
+        $('.alert-info').removeClass('alert-info--succes');
+        window.scrollTo({top: 450, behavior: 'smooth'});
+        $("input").removeAttr("disabled");
+
+    });
 
     $("#birthday").datepicker({ dateFormat: 'yy-mm-dd' });
     $("#emitDate").datepicker({ dateFormat: 'yy-mm-dd' });
